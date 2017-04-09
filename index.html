@@ -1,878 +1,867 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Документация REST API</title>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <title>Документация REST API</title>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="shower/themes/ribbon/styles/screen-16x10.css">
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body class="shower list">
 <header class="caption">
-		<h1>Документация REST API</h1>
-		<p>Артём Кузвесов, ideco</p>
-	</header>
-	<section class="slide" id="cover">
-		<h2>Документация REST API</h2>
-		<img src="pictures/swagger_logo.png" alt="" class="swagger-logo">
-		<p>
-			Кузвесов Артём
-		</p>
-		<img src="pictures/ideco_logo.png" alt="" class="ideco-logo">
-		<style>
-			#cover::after {
-				visibility: hidden;
-			}
-			#cover {
-				background: url("pictures/cover.png") #fff;
-			}
-			#cover h2 {
-				margin:30px 0 0;
-				color:#000;
-				text-align:center;
-				font-size:70px;
-			}
-			#cover .swagger-logo {
-				margin: 20px 50%;
-				width: 100px;
-				height: 100px;
-			}
-			#cover p {
-				color: #000;
-				right: 100px;
-				position: absolute;
-				font-size: 20px;
-				bottom: 110px;
-				text-align: right;
-				font-style: italic;
-			}
-			.ideco-logo {
-				position: absolute;
-				right: 148px;
-				bottom: 100px;
-			}
-		</style>
-	</section>
-	<section class="slide">
-		<strong>API</strong> (Application Programming Interface)
-		<img src="pictures/373721-wikipedia1.png" alt="" class="next wikipedia">
-		<span class="next">
-			- это интерфейс программирования приложения.
-			Набор готовых классов, процедур, функций, структур и констант, предоставляемых приложением (библиотекой, сервисом) или операционной системой для использования во внешних программных продуктах.
-		</span>
-		<img src="pictures/blackbox.jpg" alt="" class="next api-blackbox">
-		<style>
-			.wikipedia {
-				position: absolute;
-				left: 100px;
-				top: 7px;
-				height: 90px;
-			}
-			.api-blackbox {
-				position: absolute;
-				height: 340px;
-				right: 110px;
-			}
-		</style>
-	</section>
-	<section class="slide">
-		<strong>REST</strong> (Representational State Transfer)
-		<img src="pictures/373721-wikipedia1.png" alt="" class="next wikipedia">
-		<span class="next">
-				- архитектурный стиль взаимодействия компонентов распределённого приложения в сети.
-				REST представляет собой согласованный набор ограничений, учитываемых при проектировании распределённой гипермедиа-системы.
-		</span>
-		<style>
-			.wikipedia {
-				position: absolute;
-				left: 100px;
-				top: 7px;
-				height: 90px;
-			}
-		</style>
-	</section>
-	<section class="slide">
-		<h2>Требования к архитектуре REST</h2>
-		<ol>
-			<li class="next">Модель клиент-сервер</li>
-			<li class="next">Отсутствие состояния</li>
-			<li class="next">Кэширование</li>
-			<li class="next">Единообразие интерфейса</li>
-			<li class="next">Многоуровневая система</li>
-			<li class="next">Код по требованию (необязательное ограничение)</li>
-		</ol>
-	</section>
-	<section class="slide">
-		<h2>Методы REST API</h2>
-		<ul>
-			<li class="next">
-				<strong>C</strong>reate - <span class="method method-post">POST</span>
-			</li>
-			<li class="next">
-				<strong>R</strong>ead - <span class="method method-get">GET</span>
-			</li>
-			<li class="next">
-				<strong>U</strong>pdate - <span class="method method-put">PUT</span> / <span class="method method-patch">PATCH</span>
-			</li>
-			<li class="next">
-				<strong>D</strong>elete - <span class="method method-delete">DELETE</span>
-			</li>
-		</ul>
-		<style>
-			.method {
-				padding: 0 5px;
-				border-radius: 5px;
-			}
-			.method-post {
-				background: #10a54a;
-			}
-			.method-get {
-				background: #0f6ab4;
-			}
-			.method-put {
-				background: #c5862b;
-			}
-			.method-patch {
-				background: #d38042;
-			}
-			.method-delete {
-				background: #a41e22;
-			}
-		</style>
-	</section>
-	<section class="slide">
-		<h2 class="shout grow">Зачем документировать API?</h2>
-	</section>
-	<section class="slide">
-		<h2>Какие есть варианты?</h2>
-		<ol>
-			<li class="next">Описывать вручную:
-				<ul>
-					<li class="next">На бумажке</li>
-					<li class="next">MarkDown</li>
-					<li class="next">Google Docs/Tables</li>
-					<li class="next">В комментариях кода</li>
-					<li class="next">и т.п.</li>
-				</ul>
-			</li>
-			<li class="next">Использовать готовые сервисы</li>
-		</ol>
-	</section>
-	<section class="slide" id="services">
-		<h2>Сервисы для документирования API</h2>
-		<div class="services">
-			<img src="pictures/swagger_logo.png" alt="" class="swagger">
-			<img src="pictures/services/apiary.png" alt="" class="apiary">
-			<img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
-			<img src="pictures/services/ramllogo.png" alt="" class="raml">
-			<img src="pictures/services/apidoc.png" alt="" class="apidoc">
-			<img src="pictures/services/apigee.png" alt="" class="apigee">
-			<img src="pictures/services/apigen.png" alt="" class="apigen">
-			<img src="pictures/services/apimatic.png" alt="" class="apimatic">
-			<img src="pictures/services/mashape.jpg" alt="" class="mashape">
-			<img src="pictures/services/phpdocumenter.png" alt="" class="phpdocumenter">
-			<div class="wsdl"><b>WSDL</b></div>
-		</div>
-		<style>
-			#services .services {
-				position: absolute;
-				left: -60px;
-				top: 0px;
-			}
-			#services .swagger {
-				position: absolute;
-				top: 320px;
-				left: 480px;
-				width: 100px;
-				height: 100px;
-			}
-			#services .apiary {
-				position: absolute;
-				top: 270px;
-				left: 550px;
-				height: 60px;
-			}
-			#services .apiblueprint {
-				position: absolute;
-				top: 190px;
-				left: 630px;
-				height: 70px;
-			}
-			#services .raml {
-				position: absolute;
-				top: 230px;
-				left: 220px;
-				height: 40px;
-			}
-			#services .apidoc {
-				position: absolute;
-				top: 430px;
-				left: 380px;
-				height: 80px;
-			}
-			#services .apigee {
-				position: absolute;
-				top: 190px;
-				left: 420px;
-				height: 80px;
-			}
-			#services .apigen {
-				position: absolute;
-				top: 330px;
-				left: 210px;
-				height: 60px;
-			}
-			#services .apimatic {
-				position: absolute;
-				top: 432px;
-				left: 220px;
-				height: 80px;
-			}
-			#services .mashape {
-				position: absolute;
-				top: 450px;
-				left: 520px;
-				height: 80px;
-			}
-			#services .phpdocumenter {
-				position: absolute;
-				top: 270px;
-				left: 780px;
-				height: 140px;
-			}
-			#services .wsdl {
-				position: absolute;
-				top: 340px;
-				left: 600px;
-				font-size: 54px;
-				height: 80px;
-			}
-		</style>
-	</section>
-	<section class="slide" id="services">
-		<h2>Сервисы для документирования API</h2>
-		<div class="services">
-			<img src="pictures/swagger_logo.png" alt="" class="swagger">
-			<img src="pictures/services/apiary.png" alt="" class="apiary">
-			<img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
-			<img src="pictures/services/ramllogo.png" alt="" class="raml">
-			<img src="pictures/services/apidoc.png" alt="" class="apidoc">
-			<img src="pictures/services/apigee.png" alt="" class="apigee">
-			<img src="pictures/services/apimatic.png" alt="" class="apimatic">
-			<img src="pictures/services/mashape.jpg" alt="" class="mashape">
-			<div class="wsdl"><b>WSDL</b></div>
-		</div>
-	</section>
-	<section class="slide" id="services">
-		<h2>Сервисы для документирования API</h2>
-		<div class="services">
-			<img src="pictures/swagger_logo.png" alt="" class="swagger">
-			<img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
-			<img src="pictures/services/ramllogo.png" alt="" class="raml">
-			<div class="wsdl"><b>WSDL</b></div>
-		</div>
-	</section>
-	<section class="slide" id="services">
-		<h2>Сервисы для документирования API</h2>
-		<div class="services">
-			<img src="pictures/swagger_logo.png" alt="" class="swagger">
-			<img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
-			<img src="pictures/services/ramllogo.png" alt="" class="raml">
-		</div>
-	</section>
-	<section class="slide vendors-blueprint">
-		<h2>Вендоры api blueprint</h2>
-		<img src="pictures/services/apiary.png" alt="" class="apiary">
-		<style>
-			.vendors-blueprint .apiary {
-				position: absolute;
-				left: 100px;
-				top: 210px;
-				height: 70px;
-			}
-		</style>
-	</section>
-	<section class="slide vendors-raml">
-		<h2>Вендоры RAML</h2>
-		<img src="pictures/vendors/raml/akana.png" alt="" class="akana">
-		<img src="pictures/vendors/raml/amazonwebservices.zip_.png" alt="" class="amazone">
-		<img src="pictures/vendors/raml/apifortress.png" alt="" class="apifortress">
-		<img src="pictures/vendors/raml/apimatic.png" alt="" class="apimatic">
-		<img src="pictures/vendors/raml/apimetrics_0.png" alt="" class="apimetrics">
-		<img src="pictures/vendors/raml/apiscience.png" alt="" class="apiscience">
-		<img src="pictures/vendors/raml/catechnologies.png" alt="" class="catechnologies">
-		<img src="pictures/vendors/raml/gelato.jpg" alt="" class="gelato">
-		<img src="pictures/vendors/raml/mulesoft.jpg" alt="" class="mulesoft">
-		<img src="pictures/vendors/raml/oracle.png" alt="" class="oracle">
-		<img src="pictures/vendors/raml/parasoft.png" alt="" class="parasoft">
-		<img src="pictures/vendors/raml/postman.png" alt="" class="postman">
-		<img src="pictures/vendors/raml/restlet.png" alt="" class="restlet">
-		<img src="pictures/vendors/raml/restunited.png" alt="" class="restunited">
-		<img src="pictures/vendors/raml/softwareag.png" alt="" class="softwareag">
-		<style>
-			.vendors-raml .akana {
-				position: absolute;
-				left: 600px;
-				top: 450px;
-				height: 40px;
-			}
-			.vendors-raml .amazone {
-				position: absolute;
-				left: 370px;
-				top: 440px;
-				height: 70px;
-			}
-			.vendors-raml .apifortress {
-				position: absolute;
-				left: 100px;
-				top: 440px;
-				height: 70px;
-			}
-			.vendors-raml .apimatic {
-				position: absolute;
-				left: 770px;
-				top: 350px;
-				height: 50px;
-			}
-			.vendors-raml .apimetrics {
-				position: absolute;
-				left: 560px;
-				top: 353px;
-				height: 50px;
-			}
-			.vendors-raml .apiscience {
-				position: absolute;
-				left: 340px;
-				top: 355px;
-				height: 50px;
-			}
-			.vendors-raml .catechnologies {
-				position: absolute;
-				left: 100px;
-				top: 360px;
-				height: 50px;
-			}
-			.vendors-raml .gelato {
-				position: absolute;
-				left: 770px;
-				top: 270px;
-				height: 60px;
-			}
-			.vendors-raml .mulesoft {
-				position: absolute;
-				left: 560px;
-				top: 270px;
-				height: 60px;
-			}
-			.vendors-raml .oracle {
-				position: absolute;
-				left: 330px;
-				top: 280px;
-				height: 50px;
-			}
-			.vendors-raml .parasoft {
-				position: absolute;
-				left: 790px;
-				top: 221px;
-				height: 30px;
-			}
-			.vendors-raml .postman {
-				position: absolute;
-				left: 100px;
-				top: 270px;
-				height: 70px;
-			}
-			.vendors-raml .restlet {
-				position: absolute;
-				left: 540px;
-				top: 200px;
-				height: 60px;
-			}
-			.vendors-raml .restunited {
-				position: absolute;
-				left: 380px;
-				top: 205px;
-				height: 50px;
-			}
-			.vendors-raml .softwareag {
-				position: absolute;
-				left: 100px;
-				top: 210px;
-				height: 40px;
-			}
-		</style>
-	</section>
-	<section class="slide vendors-swagger">
-		<h2>Вендоры Swagger</h2>
-		<img src="pictures/vendors/swagger/OpenAPI_Pantone.png" alt="" class="openAPI">
-		<div class="vendors-swagger__container">
-			<img src="pictures/vendors/swagger/1.png" alt="" class="redhat">
-			<img src="pictures/vendors/swagger/2.png" alt="" class="adobe">
-			<img src="pictures/vendors/swagger/3.png" alt="" class="evangelist">
-			<img src="pictures/vendors/swagger/4.png" alt="" class="apiary">
-			<img src="pictures/vendors/swagger/5.png" alt="" class="atlassian">
-		</div>
-		<div class="vendors-swagger__container">
-			<img src="pictures/vendors/swagger/6.png" alt="" class="ca">
-			<img src="pictures/vendors/swagger/7.png" alt="" class="capital">
-			<img src="pictures/vendors/swagger/8.png" alt="" class="cloud">
-			<img src="pictures/vendors/swagger/9.png" alt="" class="google">
-			<img src="pictures/vendors/swagger/10.png" alt="" class="heart">
-		</div>
-		<div class="vendors-swagger__container">
-			<img src="pictures/vendors/swagger/11.png" alt="" class="ibm">
-			<img src="pictures/vendors/swagger/12.png" alt="" class="isa">
-			<img src="pictures/vendors/swagger/13.png" alt="" class="mashape">
-			<img src="pictures/vendors/swagger/14.png" alt="" class="microsoft">
-			<img src="pictures/vendors/swagger/15.png" alt="" class="paypal">
-		</div>
-		<div class="vendors-swagger__container">
-			<img src="pictures/vendors/swagger/16.png" alt="" class="restlet">
-			<img src="pictures/vendors/swagger/17.png" alt="" class="artik">
-			<img src="pictures/vendors/swagger/18.png" alt="" class="smartbear">
-			<img src="pictures/vendors/swagger/19.png" alt="" class="tykio">
-		</div>
-		<style>
-			.vendors-swagger .openAPI {
-				position: absolute;
-				left: 460px;
-				top: 100px;
-				height: 70px;
-			}
-			.vendors-swagger__container {
-				display:flex;
-				justify-content: space-around;
-				align-items: center;
-			}
-			.vendors-swagger .redhat {
-				height: 90px;
-			}
-			.vendors-swagger .adobe {
-				height: 70px;
-			}
-			.vendors-swagger .evangelist {
-				height: 18px;
-			}
-			.vendors-swagger .apiary {
-				height: 90px;
-			}
-			.vendors-swagger .atlassian {
-				height: 100px;
-			}
-			.vendors-swagger .ca {
-				height: 70px;
-			}
-			.vendors-swagger .capital {
-				height: 100px;
-			}
-			.vendors-swagger .cloud {
-				height: 100px;
-			}
-			.vendors-swagger .google {
-				height: 80px;
-			}
-			.vendors-swagger .heart {
-				height: 50px;
-			}
-			.vendors-swagger .ibm {
-				height: 70px;
-			}
-			.vendors-swagger .isa {
-				height: 80px;
-			}
-			.vendors-swagger .mashape {
-				height: 120px;
-			}
-			.vendors-swagger .microsoft {
-				height: 120px;
-			}
-			.vendors-swagger .paypal {
-				height: 60px;
-			}
-			.vendors-swagger .restlet {
-				height: 80px;
-			}
-			.vendors-swagger .artik {
-				height: 120px;
-			}
-			.vendors-swagger .smartbear {
-				height: 120px;
-			}
-			.vendors-swagger .tykio {
-				height: 100px;
-			}
-		</style>
-	</section>
-<section class="slide">
-	<h2>Сравним API Blueprint, RAML и Swagger</h2>
-	<table class="striped">
-		<tr>
-			<th scope="col"></th>
-			<th>API Blueprint</th>
-			<th>RAML</th>
-			<th>Swagger</th>
-		</tr>
-		<tr>
-			<th scope="row">Спонсор</th>
-			<td>Apiary</td>
-			<td>MuleSoft</td>
-			<td>SmartBear</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Формат</th>
-			<td>Markdown</td>
-			<td>YAML</td>
-			<td>YAML, JSON</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Версия</th>
-			<td>1A9</td>
-			<td>1.0</td>
-			<td>2.0</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Разработка</th>
-			<td>Апрель 2013</td>
-			<td>Сентябрь 2013</td>
-			<td>Июль 2011</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Стандарты</th>
-			<td>-</td>
-			<td>-</td>
-			<td>Open API Initiative</td>
-		</tr>
-	</table>
+    <h1>Документация REST API</h1>
+    <p>Артём Кузвесов, ideco</p>
+</header>
+<section class="slide cover head">
+    <h2>Документация REST API</h2>
+    <img src="pictures/swagger_logo.png" alt="" class="cover-swagger-logo">
+    <p>
+        Кузвесов Артём
+    </p>
+    <img src="pictures/ideco_logo.png" alt="" class="cover-ideco-logo">
 </section>
 <section class="slide">
-	<h2>Сравним API Blueprint, RAML и Swagger (REST)</h2>
-	<table class="striped">
-		<tr>
-			<th scope="col"></th>
-			<th>API Blueprint</th>
-			<th>RAML</th>
-			<th>Swagger</th>
-		</tr>
-		<tr>
-			<th scope="row">Query параметры</th>
-			<td>+</td>
-			<td>+</td>
-			<td>+</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Path/URL параметры</th>
-			<td>+</td>
-			<td>+</td>
-			<td>+</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Header параметры</th>
-			<td>+</td>
-			<td>+</td>
-			<td>+</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Представления (status codes, mime-types)</th>
-			<td>+</td>
-			<td>+</td>
-			<td>+</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Документирование</th>
-			<td>+</td>
-			<td>+</td>
-			<td>+</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Аутентификация</th>
-			<td>-</td>
-			<td>+</td>
-			<td>+</td>
-		</tr>
-	</table>
+    <strong>API</strong> (Application Programming Interface)
+    <img src="pictures/blackbox_.jpg" alt="" class="next api-blackbox">
+    <img src="pictures/blackbox.jpg" alt="" class="next api-blackbox">
+</section>
+<section class="slide black">
+    <img src="pictures/rest.png" alt="" class="cover rest">
 </section>
 <section class="slide">
-	<h2>Подход к проектированию API</h2>
-	<table class="striped">
-		<tr>
-			<th scope="col"></th>
-			<th>API Blueprint</th>
-			<th>RAML</th>
-			<th>Swagger</th>
-		</tr>
-		<tr>
-			<th scope="row"></th>
-			<td>Top-down</td>
-			<td>Top-down</td>
-			<td>Top-down, Bottom-up</td>
-		</tr>
-	</table>
-	<img src="pictures/Top-down-bottom-up.png" alt="" class="top-down">
-	<div class="realaze">
-		<p>Реализация</p>
-	</div>
-	<div class="specification">
-		<p>Спецификация</p>
-	</div>
-	<style>
-		.realaze {
-			position: absolute;
-			left: 285px;
-		}
-		.specification {
-			position: absolute;
-			right: 290px;
-		}
-		.top-down {
-			position: absolute;
-			left: 210px;
-			top: 300px;
-			height: 370px;
-		}
-	</style>
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li class="next">Модель клиент-сервер</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img class="cover rest" src="pictures/rest1.gif" alt="">
 </section>
 <section class="slide">
-	<h2>Сравним API Blueprint, RAML и Swagger (Поддерживаемы языки)</h2>
-	<table class="striped">
-		<tr>
-			<th scope="col"></th>
-			<th>API Blueprint</th>
-			<th>RAML</th>
-			<th>Swagger</th>
-		</tr>
-		<tr>
-			<th scope="row"></th>
-			<td>Node, .Net</td>
-			<td>JS, Java, Node, PHP, Python, Ruby, .Net, Go, Haskell, Ruby, Scala</td>
-			<td>Clojure, Go, JS, Java, .Net, Node, PHP, Python, Ruby, Scala, Coldfusion, D, Eiffel, Erlang, Groovy, Typescrip</td>
-		</tr>
-	</table>
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li>Модель клиент-сервер</li>
+        <li>Отсутствие состояния</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img class="cover rest" src="pictures/rest2.gif" alt="">
 </section>
 <section class="slide">
-	<h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-	<table class="striped">
-		<tr>
-			<th scope="col"></th>
-			<th>API Blueprint</th>
-			<th>RAML</th>
-			<th>Swagger</th>
-		</tr>
-		<tr>
-			<th scope="row">Stackoverflow questions</th>
-			<td>1025</td>
-			<td>600</td>
-			<td>7733</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">GitHub Stars</th>
-			<td>4856</td>
-			<td>454</td>
-			<td>3904</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">GitHub contributors</th>
-			<td>44</td>
-			<td>33</td>
-			<td>146</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">GitHub whatchers</th>
-			<td>178</td>
-			<td>144</td>
-			<td>289</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">GitHub forks</th>
-			<td>1400</td>
-			<td>161</td>
-			<td>1296</td>
-		</tr>
-		<tr class="next">
-			<th scope="row">Google search (2016)</th>
-			<td>>350K</td>
-			<td>>85K</td>
-			<td>>733K</td>
-		</tr>
-	</table>
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li>Модель клиент-сервер</li>
+        <li>Отсутствие состояния</li>
+        <li>Кэширование</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img class="cover rest" src="pictures/rest3.gif" alt="">
 </section>
 <section class="slide">
-	<h2>Поговорим про Swagger</h2>
-	<img src="pictures/swag.jpg" alt="" class="next swag">
-	<style>
-		.swag {
-			position: absolute;
-			left: 170px;
-			top: 180px;
-			height: 420px;
-		}
-	</style>
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li>Модель клиент-сервер</li>
+        <li>Отсутствие состояния</li>
+        <li>Кэширование</li>
+        <li>Единообразие интерфейса</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img class="cover rest" src="pictures/rest4.gif" alt="">
+</section>
+<section class="slide">
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li>Модель клиент-сервер</li>
+        <li>Отсутствие состояния</li>
+        <li>Кэширование</li>
+        <li>Единообразие интерфейса</li>
+        <li>Многоуровневая система</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img class="cover rest" src="pictures/rest5.gif" alt="">
+</section>
+<section class="slide">
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li>Модель клиент-сервер</li>
+        <li>Отсутствие состояния</li>
+        <li>Кэширование</li>
+        <li>Единообразие интерфейса</li>
+        <li>Многоуровневая система</li>
+        <li>Код по требованию (необязательное ограничение)</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img class="cover rest" src="pictures/rest6.gif" alt="">
+</section>
+<section class="slide">
+    <h2>Требования к архитектуре REST</h2>
+    <ol>
+        <li>Модель клиент-сервер</li>
+        <li>Отсутствие состояния</li>
+        <li>Кэширование</li>
+        <li>Единообразие интерфейса</li>
+        <li>Многоуровневая система</li>
+        <li>Код по требованию (необязательное ограничение)</li>
+    </ol>
+</section>
+<section class="slide">
+    <h2>Методы REST API</h2>
+    <ul>
+        <li class="next">
+            <strong>C</strong>reate - <span class="method method-post">POST</span>
+        </li>
+        <li class="next">
+            <strong>R</strong>ead - <span class="method method-get">GET</span>
+        </li>
+        <li class="next">
+            <strong>U</strong>pdate - <span class="method method-put">PUT</span> / <span class="method method-patch">PATCH</span>
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2>PUT vs. PATCH</h2>
+    <ul>
+        <li class="next">
+            <span class="method method-put">PUT</span> - полностью пересоздаёт ресурс по указанному id.
+        </li>
+        <li class="next">
+            <span class="method method-patch">PATCH</span> - частично обновляет состояние ресурса по указанному id.
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2>Методы REST API</h2>
+    <ul>
+        <li>
+            <strong>C</strong>reate - <span class="method method-post">POST</span>
+        </li>
+        <li>
+            <strong>R</strong>ead - <span class="method method-get">GET</span>
+        </li>
+        <li>
+            <strong>U</strong>pdate - <span class="method method-put">PUT</span> / <span class="method method-patch">PATCH</span>
+        </li>
+        <li class="next">
+            <strong>D</strong>elete - <span class="method method-delete">DELETE</span>
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2 class="shout grow">Зачем документировать API?</h2>
+</section>
+<section class="slide">
+    <h2>Какие есть варианты?</h2>
+    <ol>
+        <li class="next">Описывать вручную:
+            <ul>
+                <li class="next">На бумаге</li>
+                <li class="next">MarkDown/reStructuredText</li>
+                <li class="next">Google Docs/Tables</li>
+                <li class="next">В комментариях кода</li>
+                <li class="next">и т.п.</li>
+            </ul>
+        </li>
+        <li class="next">Использовать готовые сервисы</li>
+    </ol>
+</section>
+<section class="slide services">
+    <h2>Сервисы для документирования API</h2>
+    <div class="services">
+        <img src="pictures/swagger_logo.png" alt="" class="swagger">
+        <img src="pictures/services/apiary.png" alt="" class="apiary">
+        <img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
+        <img src="pictures/services/ramllogo.png" alt="" class="raml">
+        <img src="pictures/services/apidoc.png" alt="" class="apidoc">
+        <img src="pictures/services/apigee.png" alt="" class="apigee">
+        <img src="pictures/services/apigen.png" alt="" class="apigen">
+        <img src="pictures/services/apimatic.png" alt="" class="apimatic">
+        <img src="pictures/services/mashape.jpg" alt="" class="mashape">
+        <img src="pictures/services/phpdocumenter.png" alt="" class="phpdocumenter">
+        <div class="wsdl"><b>WSDL</b></div>
+    </div>
+</section>
+<section class="slide services">
+    <h2>Сервисы для документирования API</h2>
+    <div class="services">
+        <img src="pictures/swagger_logo.png" alt="" class="swagger">
+        <img src="pictures/services/apiary.png" alt="" class="apiary">
+        <img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
+        <img src="pictures/services/ramllogo.png" alt="" class="raml">
+        <img src="pictures/services/apidoc.png" alt="" class="apidoc">
+        <img src="pictures/services/apigee.png" alt="" class="apigee">
+        <img src="pictures/services/apimatic.png" alt="" class="apimatic">
+        <img src="pictures/services/mashape.jpg" alt="" class="mashape">
+        <div class="wsdl"><b>WSDL</b></div>
+    </div>
+</section>
+<section class="slide services">
+    <h2>Сервисы для документирования API</h2>
+    <div class="services">
+        <img src="pictures/swagger_logo.png" alt="" class="swagger">
+        <img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
+        <img src="pictures/services/ramllogo.png" alt="" class="raml">
+        <div class="wsdl"><b>WSDL</b></div>
+    </div>
+</section>
+<section class="slide services">
+    <h2>Сервисы для документирования API</h2>
+    <div class="services">
+        <img src="pictures/swagger_logo.png" alt="" class="swagger">
+        <img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
+        <img src="pictures/services/ramllogo.png" alt="" class="raml">
+    </div>
+</section>
+<section class="slide vendors-blueprint">
+    <h2>Вендоры api blueprint</h2>
+    <img src="pictures/services/apiary.png" alt="" class="apiary">
+</section>
+<section class="slide vendors-raml">
+    <h2>Вендоры RAML</h2>
+    <img src="pictures/vendors/raml/akana.png" alt="" class="akana">
+    <img src="pictures/vendors/raml/amazonwebservices.zip_.png" alt="" class="amazone">
+    <img src="pictures/vendors/raml/apifortress.png" alt="" class="apifortress">
+    <img src="pictures/vendors/raml/apimatic.png" alt="" class="apimatic">
+    <img src="pictures/vendors/raml/apimetrics_0.png" alt="" class="apimetrics">
+    <img src="pictures/vendors/raml/apiscience.png" alt="" class="apiscience">
+    <img src="pictures/vendors/raml/catechnologies.png" alt="" class="catechnologies">
+    <img src="pictures/vendors/raml/gelato.jpg" alt="" class="gelato">
+    <img src="pictures/vendors/raml/mulesoft.jpg" alt="" class="mulesoft">
+    <img src="pictures/vendors/raml/oracle.png" alt="" class="oracle">
+    <img src="pictures/vendors/raml/parasoft.png" alt="" class="parasoft">
+    <img src="pictures/vendors/raml/postman.png" alt="" class="postman">
+    <img src="pictures/vendors/raml/restlet.png" alt="" class="restlet">
+    <img src="pictures/vendors/raml/restunited.png" alt="" class="restunited">
+    <img src="pictures/vendors/raml/softwareag.png" alt="" class="softwareag">
+</section>
+<section class="slide vendors-swagger">
+    <h2>Вендоры Swagger</h2>
+    <div class="vendors-swagger__container">
+        <img src="pictures/vendors/swagger/1.png" alt="" class="redhat">
+        <img src="pictures/vendors/swagger/2.png" alt="" class="adobe">
+        <img src="pictures/vendors/swagger/3.png" alt="" class="evangelist">
+        <img src="pictures/vendors/swagger/4.png" alt="" class="apiary">
+        <img src="pictures/vendors/swagger/5.png" alt="" class="atlassian">
+    </div>
+    <div class="vendors-swagger__container">
+        <img src="pictures/vendors/swagger/6.png" alt="" class="ca">
+        <img src="pictures/vendors/swagger/7.png" alt="" class="capital">
+        <img src="pictures/vendors/swagger/8.png" alt="" class="cloud">
+        <img src="pictures/vendors/swagger/9.png" alt="" class="google">
+        <img src="pictures/vendors/swagger/10.png" alt="" class="heart">
+    </div>
+    <div class="vendors-swagger__container">
+        <img src="pictures/vendors/swagger/11.png" alt="" class="ibm">
+        <img src="pictures/vendors/swagger/12.png" alt="" class="isa">
+        <img src="pictures/vendors/swagger/13.png" alt="" class="mashape">
+        <img src="pictures/vendors/swagger/14.png" alt="" class="microsoft">
+        <img src="pictures/vendors/swagger/15.png" alt="" class="paypal">
+    </div>
+    <div class="vendors-swagger__container">
+        <img src="pictures/vendors/swagger/16.png" alt="" class="restlet">
+        <img src="pictures/vendors/swagger/17.png" alt="" class="artik">
+        <img src="pictures/vendors/swagger/18.png" alt="" class="smartbear">
+        <img src="pictures/vendors/swagger/19.png" alt="" class="tykio">
+    </div>
+</section>
+<section class="slide">
+    <img src="pictures/vendors/swagger/OpenAPI_Pantone.png" alt="" class="shout grow openapi">
+</section>
+<!--<section class="slide black">-->
+    <!--<img class="cover oscar" src="pictures/oscar.gif" alt="">-->
+<!--</section>-->
+<section class="slide black">
+    <img class="cover oscar" src="pictures/oscar2.gif" alt="">
+</section>
+<section class="slide">
+    <img src="pictures/API_Awards_Graphics.jpg" alt="" class="shout grow award">
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Спонсор</th>
+            <td>Apiary</td>
+            <td>MuleSoft</td>
+            <td>SmartBear</td>
+        </tr>
+        <tr>
+            <th scope="row">Формат</th>
+            <td>Markdown</td>
+            <td>YAML</td>
+            <td>YAML, JSON</td>
+        </tr>
+        <tr>
+            <th scope="row">Версия</th>
+            <td>1A9</td>
+            <td>1.0</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <th scope="row">Разработка</th>
+            <td>Апрель 2013</td>
+            <td>Сентябрь 2013</td>
+            <td>Июль 2011</td>
+        </tr>
+        <tr>
+            <th scope="row">Стандарты</th>
+            <td>-</td>
+            <td>-</td>
+            <td><span class="label">Open API Initiative</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Спонсор</th>
+            <td>Apiary</td>
+            <td>MuleSoft</td>
+            <td>SmartBear</td>
+        </tr>
+        <tr>
+            <th scope="row">Формат</th>
+            <td>Markdown</td>
+            <td>YAML</td>
+            <td>YAML, JSON</td>
+        </tr>
+        <tr>
+            <th scope="row">Версия</th>
+            <td>1A9</td>
+            <td>1.0</td>
+            <td>2.0</td>
+        </tr>
+        <tr>
+            <th scope="row">Разработка</th>
+            <td>Апрель 2013</td>
+            <td>Сентябрь 2013</td>
+            <td>Июль 2011</td>
+        </tr>
+        <tr>
+            <th scope="row">Стандарты</th>
+            <td>-</td>
+            <td>-</td>
+            <td><span class="label green-label">Open API Initiative</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col" width="450"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Query параметры</th>
+            <td>+</td>
+            <td>+</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <th scope="row">Path/URL параметры</th>
+            <td>+</td>
+            <td>+</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <th scope="row">Header параметры</th>
+            <td>+</td>
+            <td>+</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <th scope="row">Представления (status codes, mime-types)</th>
+            <td>+</td>
+            <td>+</td>
+            <td>+</td>
+        </tr>
+        <tr>
+            <th scope="row">Аутентификация</th>
+            <td>+</td>
+            <td>+</td>
+            <td>+</td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Подход к проектированию API</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td>Top-down</td>
+            <td>Top-down</td>
+            <td>Top-down, Bottom-up</td>
+        </tr>
+    </table>
+    <img src="pictures/Top-down-bottom-up.png" alt="" class="top-down">
+    <div class="realaze">
+        <p>Реализация</p>
+    </div>
+    <div class="specification">
+        <p>Спецификация</p>
+    </div>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (Поддерживаемы языки)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th width="200">API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row"></th>
+            <td class="languages">NodeJS, .Net, PHP, Swift, Python, C++, Java, Ruby</td>
+            <td class="languages">JavaScript, NodeJS, Java, PHP, Python, Ruby, .Net, Go, Haskell, Ruby, Scala, Crystal, Elixir, Perl</td>
+            <td class="languages">JavaScript, NodeJS, Clojure, Go, Java, .Net, PHP, Python, Ruby, Scala, Coldfusion, D, Eiffel, Erlang, Groovy,
+                Typescrip, Elixir, Haskell, Jolie, Lua, Perl, Swift, Bash, C++
+            </td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label green-label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label green-label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label pupure-label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label green-label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label pupure-label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label green-label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label green-label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label pupure-label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label green-label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label green-label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label green-label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label pupure-label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label green-label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label green-label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label green-label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
+    <table class="striped">
+        <tr>
+            <th scope="col"></th>
+            <th>API Blueprint</th>
+            <th>RAML</th>
+            <th>Swagger</th>
+        </tr>
+        <tr>
+            <th scope="row">Stackoverflow questions</th>
+            <td>1057</td>
+            <td>644</td>
+            <td><span class="label green-label">8387</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub Stars</th>
+            <td><span class="label pupure-label">5190</span></td>
+            <td>2670</td>
+            <td>4109</td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub contributors</th>
+            <td>44</td>
+            <td>18</td>
+            <td><span class="label green-label">189</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub whatchers</th>
+            <td>180</td>
+            <td>155</td>
+            <td><span class="label green-label">467</span></td>
+        </tr>
+        <tr>
+            <th scope="row">GitHub forks</th>
+            <td>1466</td>
+            <td>434</td>
+            <td><span class="label green-label">4109</span></td>
+        </tr>
+        <tr>
+            <th scope="row">Google search (2016)</th>
+            <td>>350K</td>
+            <td>>85K</td>
+            <td><span class="label green-label">>733K</span></td>
+        </tr>
+    </table>
+</section>
+<section class="slide">
+    <h2>Поговорим про Swagger</h2>
+    <img src="pictures/swag.jpg" alt="" class="next swag">
 </section>
 <section class="slide swagger-full">
-	<img src="pictures/swagger.png" alt="" class="shout grow swagger-hi">
-	<style>
-		.swagger-full {
-			background: #87be40;
-		}
-		.slide .swagger-hi {
-			width: 50%;
-			position: absolute;
-			left: 25%;
-		}
-	</style>
+    <img src="pictures/swagger.png" alt="" class="shout grow swagger-hi">
 </section>
 <section class="slide">
-	<h2>Что даёт нам Swagger</h2>
-	<ul>
-		<li class="next">Документация</li>
-		<li class="next">Автогенерация кода</li>
-		<li class="next">Автовалидация</li>
-		<li class="next">Тесты</li>
-		<li class="next">Красивый UI</li>
-	</ul>
+    <h2>Что даёт нам Swagger</h2>
+    <ul>
+        <li class="next">Документация</li>
+        <li class="next">Автогенерация кода</li>
+        <li class="next">Автовалидация</li>
+        <li class="next">Тесты</li>
+        <li class="next">Красивый UI</li>
+    </ul>
 </section>
 <section class="slide">
-	<h2>Swagger UI</h2>
-	<img src="pictures/ui1.png" alt="" class="ui1">
-	<style>
-		.ui1 {
-			position: absolute;
-			left: 80px;
-			top: 180px;
-			height: 420px;
-		}
-	</style>
-</section>
-<!--<section class="slide">-->
-	<!--<h2>Swagger UI (GET)</h2>-->
-	<!--<img src="pictures/ui2.png" alt="" class="ui2">-->
-	<!--<style>-->
-		<!--.ui2 {-->
-			<!--position: absolute;-->
-			<!--left: 320px;-->
-			<!--top: 180px;-->
-			<!--height: 420px;-->
-		<!--}-->
-	<!--</style>-->
-<!--</section>-->
-<!--<section class="slide">-->
-	<!--<h2>Swagger UI (POST)</h2>-->
-	<!--<img src="pictures/ui3.png" alt="" class="ui3">-->
-	<!--<style>-->
-		<!--.ui3 {-->
-			<!--position: absolute;-->
-			<!--left: 120px;-->
-			<!--top: 180px;-->
-			<!--height: 420px;-->
-		<!--}-->
-	<!--</style>-->
-<!--</section>-->
-<!--<section class="slide">-->
-	<!--<h2>Swagger UI (GET id)</h2>-->
-	<!--<img src="pictures/ui4.png" alt="" class="ui4">-->
-	<!--<style>-->
-		<!--.ui4 {-->
-			<!--position: absolute;-->
-			<!--left: 80px;-->
-			<!--top: 180px;-->
-			<!--height: 340px;-->
-		<!--}-->
-	<!--</style>-->
-<!--</section>-->
-<section class="slide">
-	<h2>Swagger UI</h2>
-	<h2 class="shout"><a href="http://localhost:8000/api_doc/">Живой пример</a></h2>
+    <h2>Swagger UI</h2>
+    <img src="pictures/ui1.png" alt="" class="ui1">
 </section>
 <section class="slide">
-	<h2>Как мы получили такую документацию?</h2>
-	<pre>
+    <h2>UI конкурентов</h2>
+    <ul>
+        <li>
+            <a href="http://docs.pandurangpatil.apiary.io/#">API Blueprint (apiary)</a>
+        </li>
+        <li>
+            <a href="https://anypoint.mulesoft.com/apiplatform/popular/#/portals/organizations/52560d3f-c37a-409d-9887-79e0a9a9ecff/apis/5502/versions/5487/pages/30295">RAML</a>
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2>Swagger UI</h2>
+    <h2 class="shout"><a href="http://localhost:8000/api_doc/">Живой пример</a></h2>
+</section>
+<section class="slide">
+    <h2>Как мы получили такую документацию?</h2>
+    <pre>
 		<code class="next">swagger-ui</code>
 		<code class="next">swagger-jsdoc</code>
 	</pre>
 </section>
 <section class="slide">
-	<h2><a href="https://github.com/ArtKuz/rest-api-documentation-nodejs-swagger-example">Репозиторий с примером</a></h2>
-	<h2 class="shout"><img src="pictures/qr-code-api.gif" alt="" class="qr-api"></h2>
-	<style>
-		.qr-api {
-			margin-top: 175px;
-		}
-	</style>
+    <h2>
+        <a href="https://github.com/ArtKuz/rest-api-documentation-nodejs-swagger-example">Репозиторий с примером</a>
+    </h2>
+    <img src="pictures/qr-code-api.gif" alt="" class="qr-api"/>
 </section>
 <section class="slide">
-	<h2>Как это выглядит в коде?</h2>
-	<img src="pictures/get.png" alt="" class="get">
-	<img src="pictures/post.png" alt="" class="post">
-	<style>
-		.post {
-			position: absolute;
-			left: 580px;
-			top: 180px;
-			height: 340px;
-		}
-	</style>
-	<style>
-		.get {
-			position: absolute;
-			left: 80px;
-			top: 180px;
-			height: 340px;
-		}
-	</style>
+    <h2 class="shout">Как это выглядит в коде?</h2>
 </section>
 <section class="slide">
-	<h2>Как это выглядит в коде? (YAML)</h2>
-	<img src="pictures/yaml.png" alt="" class="yaml">
-	<style>
-		.yaml {
-			position: absolute;
-			left: 240px;
-			top: 180px;
-			height: 440px;
-		}
-	</style>
+    <img src="pictures/get_white.png" alt="" class="get">
 </section>
 <section class="slide">
-	<h2>А если нужно пометить метод, как deprecated?</h2>
-	<img src="pictures/deprecated_code.png" alt="" class="next deprecated-code">
-	<style>
-		.deprecated-code {
-			position: absolute;
-			left: 240px;
-			top: 220px;
-			height: 390px;
-		}
-	</style>
+    <img src="pictures/post_white.png" alt="" class="post">
 </section>
 <section class="slide">
-	<h2>Как deprecated метод отобразится в документации?</h2>
-	<img src="pictures/deprecated_doc.png" alt="" class="next deprecated_doc">
-	<style>
-		.deprecated_doc {
-			position: absolute;
-			left: 80px;
-			top: 270px;
-			height: 260px;
-		}
-	</style>
+    <img src="pictures/yaml_white.png" alt="" class="yaml">
 </section>
 <section class="slide">
-	<h2>Swagger Editor</h2>
-	<img src="pictures/editor.png" alt="" class="editor">
-	<style>
-		.editor {
-			position: absolute;
-			left: 80px;
-			top: 180px;
-			height: 420px;
-		}
-	</style>
+    <h2>А если нужно пометить метод, как deprecated?</h2>
+    <img src="pictures/deprecated_code_white.png" alt="" class="next deprecated-code">
 </section>
 <section class="slide">
-	<h2>Swagger Editor (локально и удаленно)</h2>
-	<p>
-		<a href="http://editor.swagger.io/#/">Swagger Editor</a>
-	</p>
-	<pre>
+    <h2>Как deprecated метод отобразится в документации?</h2>
+    <img src="pictures/deprecated_doc.png" alt="" class="next deprecated_doc">
+</section>
+<section class="slide">
+    <h2>Swagger Editor</h2>
+    <img src="pictures/editor.png" alt="" class="editor">
+</section>
+<section class="slide">
+    <h2>Editor конкурентов</h2>
+    <ul>
+        <li>
+            <a href="http://static-anypoint-mulesoft-com.s3.amazonaws.com/API_examples_notebooks/raml-design2.html">RAML(v0.8) API Designer</a>
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2>Swagger Editor (локально и удаленно)</h2>
+    <p>
+        <a href="http://editor.swagger.io/#/">Swagger Editor</a>
+    </p>
+    <pre>
 		<code class="next">npm i -g swagger</code>
 		<code class="next">swagger project create todo-api</code>
 		<code class="next">swagger project edit todo-api</code>
@@ -881,169 +870,85 @@
 	</pre>
 </section>
 <section class="slide">
-	<h2>Swagger Codegen (server)</h2>
-	<img src="pictures/server.png" alt="" class="server">
-	<style>
-		.server {
-			position: absolute;
-			left: 380px;
-			top: 180px;
-			height: 420px;
-		}
-	</style>
+    <h2>Swagger Codegen (server)</h2>
+    <img src="pictures/server.png" alt="" class="server">
 </section>
 <section class="slide">
-	<h2>Swagger Codegen (client)</h2>
-	<img src="pictures/client.png" alt="" class="client">
-	<style>
-		.client {
-			position: absolute;
-			left: 180px;
-			top: 180px;
-			height: 420px;
-		}
-	</style>
+    <h2>Swagger Codegen (client)</h2>
+    <img src="pictures/client.png" alt="" class="client">
 </section>
 <section class="slide">
-	<h2>Swagger + Confluence</h2>
-	<h2 class="shout"><a href="https://confluence.slkdev.net/display/DEMO/Swagger+Confluence+Demos">Пример</a></h2>
+    <h2>Swagger + Confluence</h2>
+    <h2 class="shout"><a href="https://confluence.slkdev.net/display/DEMO/Swagger+Confluence+Demos">Пример</a></h2>
 </section>
 <section class="slide">
-	<h2>Swagger (JSON)</h2>
-	<h2 class="shout"><a href="./swagger.json">Пример</a></h2>
+    <h2>Swagger (JSON)</h2>
+    <h2 class="shout"><a href="./swagger.json">Пример</a></h2>
 </section>
 <section class="slide">
-	<h2>Swagger (HTML)</h2>
-	<h2 class="shout"><a href="./html.html">Пример</a></h2>
+    <h2>Swagger (HTML)</h2>
+    <ul>
+        <li><a href="./html.html">Пример 1</a></li>
+        <li><a href="./html2.html">Пример 2</a></li>
+    </ul>
 </section>
 <section class="slide">
-	<h2>Можно ли тестировать полученную документацию?</h2>
-	<ul>
-		<li class="next">Да</li>
-		<li class="next">Можно парсить получаемый JSON/YAML и сопоставлять пути и параметры с теми, что описаны в коде</li>
-		<li class="next">JSON shema validator</li>
-	</ul>
+    <h2>Можно ли тестировать полученную документацию?</h2>
+    <ul>
+        <li class="next">Да</li>
+        <li class="next">Можно парсить получаемый JSON/YAML и сопоставлять пути и параметры с теми, что описаны в коде
+        </li>
+        <li class="next">JSON Schema validator</li>
+    </ul>
 </section>
 <section class="slide">
-	<h2>Выводы по Swagger</h2>
-	<ol>
-		<li class="next">Плюсы:
-			<ul>
-				<li class="next">Большое сообщество и экосистема (> 45 сервисов)</li>
-				<li class="next">Поддержка большого количества языков (> 13)</li>
-				<li class="next">Богатая спецификация</li>
-				<li class="next">Поддержка JSON Shema</li>
-				<li class="next">Визуальные инструменты</li>
-				<li class="next">Платформонезависимость</li>
-				<li class="next">OpenAPI Specification</li>
-			</ul>
-		</li>
-	</ol>
+    <h2>Выводы по Swagger</h2>
+    <ul>
+        <li class="next">Большое сообщество и экосистема (> 45 сервисов)</li>
+        <li class="next">Поддержка большого количества языков (> 13)</li>
+        <li class="next">Богатая спецификация</li>
+        <li class="next">Поддержка JSON Schema</li>
+        <li class="next">Визуальные инструменты</li>
+        <li class="next">Платформонезависимость</li>
+        <li class="next">OpenAPI Specification</li>
+    </ul>
 </section>
 <section class="slide">
-	<h2>Выводы по Swagger</h2>
-	<ol>
-		<li class="next">Минусы:</li>
-		<ul>
-			<li class="next">Зоопарк сторонних бибилиотек</li>
-			<li class="next">Несовместимость текущей версии 2.0 с предыдущей версией 1.2</li>
-		</ul>
-	</ol>
+    <h2 class="shout">Спасибо</h2>
 </section>
 <section class="slide">
-	<h2 class="shout">Спасибо</h2>
+    <h2>Кузвесов Артём, ideco</h2>
+    <p class="about">
+        <img src="pictures/mail.png" alt="" class="mail">
+        <a href="mailto:arktuz@yandex.ru">arktuz@yandex.ru</a>
+        <br/>
+        <img src="pictures/telegram.png" alt="" class="telegram">
+        <a href="http://t.me/artemkuzvesov">@artemkuzvesov</a>
+        <br/>
+        <img src="pictures/vk.png" alt="" class="vk">
+        <a href="https://vk.com/artem_kuzvesov">artem_kuzvesov</a>
+        <br/>
+        <img src="pictures/fb.png" alt="" class="fb">
+        <a href="https://www.facebook.com/artemkuzvesov">artemkuzvesov</a>
+    </p>
+    <div class="qr-text">
+        <a href="https://rawgit.com/ArtKuz/presentation-ideco-swagger/master/">Ссылка на презентацию:</a>
+    </div>
+    <img src="pictures/qr-code.gif" alt="" class="qr">
 </section>
 <section class="slide">
-	<h2>Кузвесов Артём, ideco</h2>
-	<p class="about">
-		<img src="pictures/github.png" alt="" class="github">
-		<a href="https://github.com/ArtKuz">ArtKuz</a>
-		<br />
-		<img src="pictures/bitbucket_logo.svg" alt="" class="bitbucket">
-		<a href="https://bitbucket.org/ArtKuz/">ArtKuz</a>
-		<br />
-		<img src="pictures/twitter.svg" alt="" class="twitter">
-		<a href="https://twitter.com/ArtKuz">@ArtKuz</a>
-		<br />
-		<img src="pictures/mail.png" alt="" class="mail">
-		<a href="mailto:arktuz@yandex.ru">arktuz@yandex.ru</a>
-		<br />
-		<img src="pictures/vk.png" alt="" class="vk">
-		<a href="https://vk.com/artem_kuzvesov">artem_kuzvesov</a>
-		<br />
-		<img src="pictures/fb.png" alt="" class="fb">
-		<a href="https://www.facebook.com/artemkuzvesov">artemkuzvesov</a>
-	</p>
-	<div class="qr-text">
-		<a href="https://rawgit.com/ArtKuz/presentation-ideco-swagger/master/">Ссылка на презентацию:</a>
-	</div>
-	<img src="pictures/qr-code.gif" alt="" class="qr">
-	<style>
-		.about {
-			margin: 0 0 0 40px;
-		}
-		.qr-text {
-			position: absolute;
-			right: 160px;
-			top: 160px;
-			z-index: 1;
-		}
-		.qr {
-			position: absolute;
-			right: 50px;
-			top: 180px;
-		}
-		.github {
-			position: absolute;
-			top: 200px;
-			left: 100px;
-			height: 30px;
-		}
-		.bitbucket {
-			position: absolute;
-			top: 254px;
-			left: 100px;
-			height: 26px;
-		}
-		.twitter {
-			position: absolute;
-			top: 305px;
-			left: 100px;
-			height: 26px;
-		}
-		.mail {
-			position: absolute;
-			top: 358px;
-			left: 100px;
-			height: 23px;
-		}
-		.vk {
-			position: absolute;
-			top: 405px;
-			left: 102px;
-			height: 26px;
-		}
-		.fb {
-			position: absolute;
-			top: 455px;
-			left: 102px;
-			height: 26px;
-		}
-	</style>
+    <h2 class="shout">Вопросы?</h2>
 </section>
-<section class="slide">
-	<h2 class="shout">Вопросы?</h2>
-</section>
-	<p class="badge">
-		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
-	</p>
-	<!--
-		To hide progress bar from entire presentation
-		just remove “progress” element.
-		-->
-	<div class="progress"></div>
-	<script src="shower/shower.min.js"></script>
-	<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
-	<!-- Photos by John Carey, fiftyfootshadows.net -->
+<p class="badge">
+    <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+</p>
+<!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+<div class="progress"></div>
+<script src="shower/shower.min.js"></script>
+<!-- Copyright © 2015 Yours Truly, Famous Inc. -->
+<!-- Photos by John Carey, fiftyfootshadows.net -->
 </body>
 </html>

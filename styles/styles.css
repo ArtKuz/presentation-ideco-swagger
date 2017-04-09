@@ -1,0 +1,476 @@
+.cover::after {
+    visibility: hidden;
+}
+.head {
+    background: url("../pictures/cover.png") #fff;
+}
+.head h2 {
+    margin:30px 0 0;
+    color:#000;
+    text-align:center;
+    font-size:70px;
+}
+.cover-swagger-logo {
+    margin: 20px 50%;
+    width: 100px;
+    height: 100px;
+}
+.head p {
+    color: #000;
+    right: 100px;
+    position: absolute;
+    font-size: 20px;
+    bottom: 110px;
+    text-align: right;
+    font-style: italic;
+}
+.cover-ideco-logo {
+    position: absolute;
+    right: 148px;
+    bottom: 100px;
+}
+
+.api-blackbox {
+    position: absolute;
+    height: 460px;
+    left: 300px;
+    bottom: 30px;
+}
+
+.rest {
+    width: 100%;
+}
+
+.method {
+    padding: 0 5px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+.method-post {
+    background: #10a54a;
+}
+.method-get {
+    background: #0f6ab4;
+    color: #fff;
+}
+.method-put {
+    background: #c5862b;
+}
+.method-patch {
+    background: #d38042;
+}
+.method-delete {
+    background: #a41e22;
+    color: #fff;
+}
+
+.services .services {
+    position: absolute;
+    left: -60px;
+    top: 0px;
+}
+.services .swagger {
+    position: absolute;
+    top: 320px;
+    left: 480px;
+    width: 100px;
+    height: 100px;
+}
+.services .apiary {
+    position: absolute;
+    top: 270px;
+    left: 550px;
+    height: 60px;
+}
+.services .apiblueprint {
+    position: absolute;
+    top: 190px;
+    left: 630px;
+    height: 70px;
+}
+.services .raml {
+    position: absolute;
+    top: 230px;
+    left: 220px;
+    height: 40px;
+}
+.services .apidoc {
+    position: absolute;
+    top: 430px;
+    left: 380px;
+    height: 80px;
+}
+.services .apigee {
+    position: absolute;
+    top: 190px;
+    left: 420px;
+    height: 80px;
+}
+.services .apigen {
+    position: absolute;
+    top: 330px;
+    left: 210px;
+    height: 60px;
+}
+.services .apimatic {
+    position: absolute;
+    top: 432px;
+    left: 220px;
+    height: 80px;
+}
+.services .mashape {
+    position: absolute;
+    top: 450px;
+    left: 520px;
+    height: 80px;
+}
+.services .phpdocumenter {
+    position: absolute;
+    top: 270px;
+    left: 780px;
+    height: 140px;
+}
+.services .wsdl {
+    position: absolute;
+    top: 340px;
+    left: 600px;
+    font-size: 54px;
+    height: 80px;
+}
+.vendors-blueprint .apiary {
+    position: absolute;
+    left: 100px;
+    top: 210px;
+    height: 70px;
+}
+.vendors-raml .akana {
+    position: absolute;
+    left: 600px;
+    top: 540px;
+    height: 40px;
+}
+.vendors-raml .amazone {
+    position: absolute;
+    left: 370px;
+    top: 530px;
+    height: 70px;
+}
+.vendors-raml .apifortress {
+    position: absolute;
+    left: 100px;
+    top: 530px;
+    height: 70px;
+}
+.vendors-raml .apimatic {
+    position: absolute;
+    left: 770px;
+    top: 440px;
+    height: 50px;
+}
+.vendors-raml .apimetrics {
+    position: absolute;
+    left: 560px;
+    top: 440px;
+    height: 50px;
+}
+.vendors-raml .apiscience {
+    position: absolute;
+    left: 340px;
+    top: 440px;
+    height: 50px;
+}
+.vendors-raml .catechnologies {
+    position: absolute;
+    left: 100px;
+    top: 440px;
+    height: 50px;
+}
+.vendors-raml .gelato {
+    position: absolute;
+    left: 770px;
+    top: 310px;
+    height: 60px;
+}
+.vendors-raml .mulesoft {
+    position: absolute;
+    left: 560px;
+    top: 310px;
+    height: 60px;
+}
+.vendors-raml .oracle {
+    position: absolute;
+    left: 330px;
+    top: 315px;
+    height: 50px;
+}
+.vendors-raml .parasoft {
+    position: absolute;
+    left: 790px;
+    top: 221px;
+    height: 30px;
+}
+.vendors-raml .postman {
+    position: absolute;
+    left: 100px;
+    top: 310px;
+    height: 70px;
+}
+.vendors-raml .restlet {
+    position: absolute;
+    left: 540px;
+    top: 200px;
+    height: 60px;
+}
+.vendors-raml .restunited {
+    position: absolute;
+    left: 380px;
+    top: 205px;
+    height: 50px;
+}
+.vendors-raml .softwareag {
+    position: absolute;
+    left: 100px;
+    top: 210px;
+    height: 40px;
+}
+.openAPI {
+    position: absolute;
+    left: 460px;
+    top: 100px;
+    height: 70px;
+}
+.vendors-swagger__container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.vendors-swagger .redhat {
+    height: 90px;
+}
+.vendors-swagger .adobe {
+    height: 70px;
+}
+.vendors-swagger .evangelist {
+    height: 18px;
+}
+.vendors-swagger .apiary {
+    height: 90px;
+}
+.vendors-swagger .atlassian {
+    height: 100px;
+}
+.vendors-swagger .ca {
+    height: 70px;
+}
+.vendors-swagger .capital {
+    height: 100px;
+}
+.vendors-swagger .cloud {
+    height: 100px;
+}
+.vendors-swagger .google {
+    height: 80px;
+}
+.vendors-swagger .heart {
+    height: 50px;
+}
+.vendors-swagger .ibm {
+    height: 70px;
+}
+.vendors-swagger .isa {
+    height: 80px;
+}
+.vendors-swagger .mashape {
+    height: 120px;
+}
+.vendors-swagger .microsoft {
+    height: 120px;
+}
+.vendors-swagger .paypal {
+    height: 60px;
+}
+.vendors-swagger .restlet {
+    height: 80px;
+}
+.vendors-swagger .artik {
+    height: 120px;
+}
+.vendors-swagger .smartbear {
+    height: 120px;
+}
+.vendors-swagger .tykio {
+    height: 100px;
+}
+
+.shout.openapi {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+}
+
+.oscar {
+    width: 100%;
+}
+
+.shout.award {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+}
+
+.label {
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.green-label {
+    background: #9ac526;
+}
+
+.pupure-label {
+    background: #2C1B56;
+    color: #fff;
+}
+
+.realaze {
+    position: absolute;
+    left: 285px;
+}
+.specification {
+    position: absolute;
+    right: 290px;
+}
+.top-down {
+    position: absolute;
+    left: 210px;
+    top: 300px;
+    height: 370px;
+}
+
+.languages {
+    padding: 0 10px;
+}
+
+.swag {
+    position: absolute;
+    left: 170px;
+    top: 180px;
+    height: 420px;
+}
+.swagger-full {
+    background: #87be40;
+}
+.slide .swagger-hi {
+    width: 50%;
+    position: absolute;
+    left: 25%;
+}
+.ui1 {
+    position: absolute;
+    left: 80px;
+    top: 180px;
+    height: 420px;
+}
+.qr-api {
+    position: absolute;
+    left: 320px;
+    bottom: 10px;
+}
+.post {
+    position: absolute;
+    left: 80px;
+    top: 30px;
+    height: 580px;
+}
+.get {
+    position: absolute;
+    left: 80px;
+    top: 30px;
+    height: 580px;
+}
+.yaml {
+    position: absolute;
+    left: 80px;
+    top: 30px;
+    height: 580px;
+}
+.deprecated-code {
+    position: absolute;
+    left: 80px;
+    top: 220px;
+    height: 390px;
+}
+.deprecated_doc {
+    position: absolute;
+    left: 80px;
+    top: 270px;
+    height: 260px;
+}
+.editor {
+    position: absolute;
+    left: 80px;
+    top: 180px;
+    height: 420px;
+}
+.server {
+    position: absolute;
+    left: 380px;
+    top: 180px;
+    height: 420px;
+}
+.client {
+    position: absolute;
+    left: 180px;
+    top: 180px;
+    height: 420px;
+}
+.about {
+    margin: 0 0 0 40px;
+}
+.qr-text {
+    position: absolute;
+    right: 160px;
+    top: 160px;
+    z-index: 1;
+}
+.qr {
+    position: absolute;
+    right: 50px;
+    top: 180px;
+}
+.github {
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    height: 30px;
+}
+.bitbucket {
+    position: absolute;
+    top: 254px;
+    left: 100px;
+    height: 26px;
+}
+.telegram {
+    position: absolute;
+    top: 252px;
+    left: 100px;
+    height: 35px;
+}
+.mail {
+    position: absolute;
+    top: 208px;
+    left: 100px;
+    height: 23px;
+}
+.vk {
+    position: absolute;
+    top: 305px;
+    left: 102px;
+    height: 26px;
+}
+.fb {
+    position: absolute;
+    top: 355px;
+    left: 102px;
+    height: 26px;
+}
