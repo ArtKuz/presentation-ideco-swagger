@@ -1,3 +1,7 @@
+.progress {
+    border-color: #edbb21;
+    border-right-color: transparent;
+}
 .cover::after {
     visibility: hidden;
 }
@@ -10,17 +14,22 @@
     text-align:center;
     font-size:70px;
 }
+h3 {
+    margin-bottom: 20px;
+    color: #585a5e;
+    font: 700 35px/1 PT Sans Narrow,sans-serif;
+}
 .cover-swagger-logo {
-    margin: 20px 50%;
-    width: 100px;
-    height: 100px;
+    margin: 20px 45%;
+    width: 130px;
+    height: 130px;
 }
 .head p {
     color: #000;
     right: 100px;
     position: absolute;
-    font-size: 20px;
-    bottom: 110px;
+    font-size: 24px;
+    bottom: 115px;
     text-align: right;
     font-style: italic;
 }
@@ -28,12 +37,13 @@
     position: absolute;
     right: 148px;
     bottom: 100px;
+    width: 120px;
 }
 
 .api-blackbox {
     position: absolute;
-    height: 460px;
-    left: 300px;
+    height: 580px;
+    left: 230px;
     bottom: 30px;
 }
 
@@ -48,10 +58,12 @@
 }
 .method-post {
     background: #10a54a;
+    margin: 0 0 0 8px;
 }
 .method-get {
     background: #0f6ab4;
     color: #fff;
+    margin: 0 0 0 23px;
 }
 .method-put {
     background: #c5862b;
@@ -62,6 +74,13 @@
 .method-delete {
     background: #a41e22;
     color: #fff;
+    margin: 0 0 0 5px;
+}
+.li-patch {
+    padding: 0 0 0 82px;
+}
+.slide ul>li.li-patch::before {
+    content: '';
 }
 
 .services .services {
@@ -69,73 +88,82 @@
     left: -60px;
     top: 0px;
 }
+
+.slide h2.title-services {
+    font-size: 48px;
+}
+
 .services .swagger {
     position: absolute;
-    top: 320px;
-    left: 480px;
-    width: 100px;
-    height: 100px;
+    top: 370px;
+    left: 455px;
+    width: 130px;
 }
 .services .apiary {
     position: absolute;
-    top: 270px;
-    left: 550px;
-    height: 60px;
+    top: 300px;
+    left: 540px;
+    height: 80px;
 }
 .services .apiblueprint {
     position: absolute;
     top: 190px;
-    left: 630px;
-    height: 70px;
+    left: 650px;
+    height: 90px;
 }
 .services .raml {
     position: absolute;
-    top: 230px;
-    left: 220px;
-    height: 40px;
+    top: 213px;
+    left: 130px;
+    height: 60px;
 }
 .services .apidoc {
     position: absolute;
-    top: 430px;
-    left: 380px;
-    height: 80px;
+    top: 410px;
+    left: 320px;
+    height: 110px;
 }
 .services .apigee {
     position: absolute;
-    top: 190px;
-    left: 420px;
-    height: 80px;
+    top: 200px;
+    left: 390px;
+    height: 100px;
 }
 .services .apigen {
     position: absolute;
-    top: 330px;
-    left: 210px;
-    height: 60px;
+    top: 320px;
+    left: 200px;
+    height: 70px;
 }
 .services .apimatic {
     position: absolute;
-    top: 432px;
-    left: 220px;
-    height: 80px;
+    top: 422px;
+    left: 130px;
+    height: 110px;
 }
 .services .mashape {
     position: absolute;
-    top: 450px;
+    top: 540px;
     left: 520px;
-    height: 80px;
+    height: 100px;
+}
+.services .mrdoc {
+    position: absolute;
+    top: 530px;
+    left: 250px;
+    height: 210px;
 }
 .services .phpdocumenter {
     position: absolute;
-    top: 270px;
-    left: 780px;
-    height: 140px;
+    top: 320px;
+    left: 850px;
+    height: 180px;
 }
-.services .wsdl {
+.services .turnapi {
     position: absolute;
-    top: 340px;
-    left: 600px;
-    font-size: 54px;
-    height: 80px;
+    top: 420px;
+    left: 580px;
+    height: 90px;
 }
 .vendors-blueprint .apiary {
     position: absolute;
@@ -146,91 +174,91 @@
 .vendors-raml .akana {
     position: absolute;
     left: 600px;
-    top: 540px;
+    top: 555px;
     height: 40px;
 }
 .vendors-raml .amazone {
     position: absolute;
     left: 370px;
-    top: 530px;
+    top: 540px;
     height: 70px;
 }
 .vendors-raml .apifortress {
     position: absolute;
-    left: 100px;
-    top: 530px;
+    left: 70px;
+    top: 540px;
     height: 70px;
 }
 .vendors-raml .apimatic {
     position: absolute;
-    left: 770px;
+    left: 740px;
     top: 440px;
     height: 50px;
 }
 .vendors-raml .apimetrics {
     position: absolute;
-    left: 560px;
+    left: 520px;
     top: 440px;
     height: 50px;
 }
 .vendors-raml .apiscience {
     position: absolute;
-    left: 340px;
+    left: 310px;
     top: 440px;
     height: 50px;
 }
 .vendors-raml .catechnologies {
     position: absolute;
-    left: 100px;
+    left: 70px;
     top: 440px;
     height: 50px;
 }
 .vendors-raml .gelato {
     position: absolute;
-    left: 770px;
-    top: 310px;
+    left: 760px;
+    top: 325px;
     height: 60px;
 }
 .vendors-raml .mulesoft {
     position: absolute;
-    left: 560px;
-    top: 310px;
+    left: 530px;
+    top: 325px;
     height: 60px;
 }
 .vendors-raml .oracle {
     position: absolute;
-    left: 330px;
-    top: 315px;
+    left: 305px;
+    top: 320px;
     height: 50px;
 }
 .vendors-raml .parasoft {
     position: absolute;
-    left: 790px;
-    top: 221px;
+    left: 780px;
+    top: 245px;
     height: 30px;
 }
 .vendors-raml .postman {
     position: absolute;
-    left: 100px;
-    top: 310px;
+    left: 70px;
+    top: 320px;
     height: 70px;
 }
 .vendors-raml .restlet {
     position: absolute;
-    left: 540px;
-    top: 200px;
+    left: 530px;
+    top: 223px;
     height: 60px;
 }
 .vendors-raml .restunited {
     position: absolute;
-    left: 380px;
-    top: 205px;
+    left: 360px;
+    top: 230px;
     height: 50px;
 }
 .vendors-raml .softwareag {
     position: absolute;
-    left: 100px;
-    top: 210px;
+    left: 70px;
+    top: 230px;
     height: 40px;
 }
 .openAPI {
@@ -243,63 +271,66 @@
     display:flex;
     justify-content: space-around;
     align-items: center;
+    width: 900px;
+    position: relative;
+    right: 50px;
 }
 .vendors-swagger .redhat {
-    height: 90px;
+    height: 95px;
 }
 .vendors-swagger .adobe {
-    height: 70px;
+    height: 75px;
 }
 .vendors-swagger .evangelist {
-    height: 18px;
+    height: 23px;
 }
 .vendors-swagger .apiary {
-    height: 90px;
+    height: 95px;
 }
 .vendors-swagger .atlassian {
-    height: 100px;
+    height: 105px;
 }
 .vendors-swagger .ca {
-    height: 70px;
+    height: 75px;
 }
 .vendors-swagger .capital {
-    height: 100px;
+    height: 105px;
 }
 .vendors-swagger .cloud {
-    height: 100px;
+    height: 110px;
 }
 .vendors-swagger .google {
-    height: 80px;
+    height: 90px;
 }
 .vendors-swagger .heart {
-    height: 50px;
-}
-.vendors-swagger .ibm {
-    height: 70px;
-}
-.vendors-swagger .isa {
-    height: 80px;
-}
-.vendors-swagger .mashape {
-    height: 120px;
-}
-.vendors-swagger .microsoft {
-    height: 120px;
-}
-.vendors-swagger .paypal {
     height: 60px;
 }
-.vendors-swagger .restlet {
+.vendors-swagger .ibm {
     height: 80px;
 }
+.vendors-swagger .isa {
+    height: 90px;
+}
+.vendors-swagger .mashape {
+    height: 130px;
+}
+.vendors-swagger .microsoft {
+    height: 130px;
+}
+.vendors-swagger .paypal {
+    height: 70px;
+}
+.vendors-swagger .restlet {
+    height: 90px;
+}
 .vendors-swagger .artik {
-    height: 120px;
+    height: 130px;
 }
 .vendors-swagger .smartbear {
-    height: 120px;
+    height: 130px;
 }
 .vendors-swagger .tykio {
-    height: 100px;
+    height: 110px;
 }
 
 .shout.openapi {
@@ -318,6 +349,10 @@
     left: 15%;
 }
 
+.center {
+    text-align: center!important;
+}
+
 .label {
     padding: 0 5px;
     border-radius: 5px;
@@ -334,17 +369,17 @@
 
 .realaze {
     position: absolute;
-    left: 285px;
+    left: 215px;
 }
 .specification {
     position: absolute;
-    right: 290px;
+    right: 250px;
 }
 .top-down {
     position: absolute;
-    left: 210px;
+    left: 90px;
     top: 300px;
-    height: 370px;
+    height: 500px;
 }
 
 .languages {
@@ -353,89 +388,151 @@
 
 .swag {
     position: absolute;
-    left: 170px;
+    left: 65px;
     top: 180px;
-    height: 420px;
+    height: 540px;
 }
 .swagger-full {
     background: #87be40;
 }
 .slide .swagger-hi {
-    width: 50%;
+    width: 60%;
     position: absolute;
-    left: 25%;
+    left: 20%;
 }
-.ui1 {
+.swagger-ui2 {
     position: absolute;
     left: 80px;
-    top: 180px;
-    height: 420px;
+    top: 170px;
+    height: 440px;
 }
+.swagger-ui2-h {
+    position: absolute;
+    top: 106px;
+    left: 310px;
+}
+.swagger-ui3-h {
+    position: absolute;
+    top: 106px;
+    left: 425px;
+}
+.swagger-ui3 {
+    position: absolute;
+    left: 80px;
+    top: 170px;
+    height: 590px;
+}
+.top-down-release {
+    display: block;
+    width: 370px;
+    margin: 0 auto;
+}
+.realaze-top-down,
+.specification-top-down{
+    font-size: 35px;
+    text-align: center;
+}
+
+.api {
+    top: 60px;
+    position: relative;
+    height: 330px;
+}
+
+.folder {
+    height: 50px;
+    position: relative;
+    top: 15px;
+}
+
+.js-file {
+    height: 50px;
+    position: relative;
+    top: 15px;
+}
+
+.folder-path {
+    margin: -50px 0 0;;
+}
+
+.folder-path-2 {
+    margin: 0 0 0 50px;
+}
+
+.routes {
+    margin: -20px 0 20px;
+}
+
+.yaml-path {
+    margin: 0 0 0 142px;
+}
+
 .qr-api {
     position: absolute;
-    left: 320px;
+    left: 220px;
     bottom: 10px;
+    height: 590px;
 }
 .post {
     position: absolute;
     left: 80px;
-    top: 30px;
-    height: 580px;
+    top: 73px;
+    height: 660px;
 }
 .get {
     position: absolute;
     left: 80px;
-    top: 30px;
-    height: 580px;
+    top: 80px;
+    height: 660px;
 }
 .yaml {
     position: absolute;
     left: 80px;
-    top: 30px;
-    height: 580px;
+    top: 60px;
+    height: 660px;
 }
 .deprecated-code {
     position: absolute;
     left: 80px;
-    top: 220px;
-    height: 390px;
+    top: 245px;
+    height: 480px;
 }
 .deprecated_doc {
     position: absolute;
-    left: 80px;
+    left: 30px;
     top: 270px;
-    height: 260px;
+    height: 290px;
 }
 .editor {
     position: absolute;
-    left: 80px;
-    top: 180px;
-    height: 420px;
+    left: 35px;
+    top: 190px;
+    height: 500px;
 }
 .server {
     position: absolute;
-    left: 380px;
-    top: 180px;
+    left: 50px;
+    top: 210px;
     height: 420px;
 }
 .client {
     position: absolute;
-    left: 180px;
+    left: 80px;
     top: 180px;
-    height: 420px;
+    height: 530px;
 }
 .about {
     margin: 0 0 0 40px;
 }
 .qr-text {
     position: absolute;
-    right: 160px;
+    right: 175px;
     top: 160px;
     z-index: 1;
 }
 .qr {
     position: absolute;
-    right: 50px;
+    right: 100px;
     top: 180px;
 }
 .github {
@@ -473,4 +570,24 @@
     top: 355px;
     left: 102px;
     height: 26px;
+}
+
+.slide.code pre {
+    font-size: 20px;
+}
+
+.slide.code.big pre {
+    margin: -97px 0 0;
+}
+
+.slide.code.small pre {
+    margin: 10px 0 0;
+}
+
+.slide.code pre code {
+    line-height: 30px;
+}
+
+.slide.code pre code.annotate {
+    color: #999;
 }
