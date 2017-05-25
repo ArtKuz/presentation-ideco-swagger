@@ -1,4 +1,4 @@
 # Документация REST API
 ## Артём Кузвесов, ideco
 
-[Презентация](https://rawgit.com/ArtKuz/presentation-ideco-swagger/master/)
+[Презентация](https://rawgit.com/ArtKuz/presentation-ideco-swagger/rit2017/)
