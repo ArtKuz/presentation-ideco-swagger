@@ -14,12 +14,29 @@
     <p>Артём Кузвесов, ideco</p>
 </header>
 <section class="slide cover head">
-    <h2>Документация REST API</h2>
+    <h2 class="title1">Документация</h2>
+    <h2 class="title2">REST API</h2>
     <img src="pictures/swagger_logo.png" alt="" class="cover-swagger-logo">
     <p>
         Кузвесов Артём
     </p>
     <img src="pictures/ideco_logo.png" alt="" class="cover-ideco-logo">
+</section>
+<section class="slide ideco-bg cover">
+    <div class="ideco-bg-logo">
+        <img src="pictures/ideco.png" alt="">
+    </div>
+    <div class="ideco-bg-product">
+        <img src="pictures/ideco-isc.png" alt="" class="next">
+        <img src="pictures/ideco-pbx.png" alt="" class="next">
+        <img src="pictures/ideco-selecta.png" alt="" class="next">
+    </div>
+</section>
+<section class="slide black">
+    <img class="cover fullstack" src="pictures/fullstack.jpg" alt="">
+</section>
+<section class="slide black">
+    <img class="cover bad-api" src="pictures/bad_api.gif" alt="">
 </section>
 <section class="slide">
     <strong>API</strong> (Application Programming Interface)
@@ -113,41 +130,19 @@
     <h2>Методы REST API</h2>
     <ul>
         <li class="next">
-            <strong>C</strong>reate - <span class="method method-post">POST</span>
+            <strong>C</strong>reate <span class="method method-post">POST</span> - создание нового ресурса.
         </li>
         <li class="next">
-            <strong>R</strong>ead - <span class="method method-get">GET</span>
+            <strong>R</strong>ead <span class="method method-get">GET</span> - получение информации о запрашиваемом ресурсе.
         </li>
         <li class="next">
-            <strong>U</strong>pdate - <span class="method method-put">PUT</span> / <span class="method method-patch">PATCH</span>
+            <strong>U</strong>pdate <span class="method method-put">PUT</span> - полностью пересоздаёт ресурс по указанному id.
         </li>
-    </ul>
-</section>
-<section class="slide">
-    <h2>PUT vs. PATCH</h2>
-    <ul>
-        <li class="next">
-            <span class="method method-put">PUT</span> - полностью пересоздаёт ресурс по указанному id.
+        <li class="next li-patch">
+            <span class="method method-patch">PATCH</span> - частично обновляет ресурс по указанному id.
         </li>
         <li class="next">
-            <span class="method method-patch">PATCH</span> - частично обновляет состояние ресурса по указанному id.
-        </li>
-    </ul>
-</section>
-<section class="slide">
-    <h2>Методы REST API</h2>
-    <ul>
-        <li>
-            <strong>C</strong>reate - <span class="method method-post">POST</span>
-        </li>
-        <li>
-            <strong>R</strong>ead - <span class="method method-get">GET</span>
-        </li>
-        <li>
-            <strong>U</strong>pdate - <span class="method method-put">PUT</span> / <span class="method method-patch">PATCH</span>
-        </li>
-        <li class="next">
-            <strong>D</strong>elete - <span class="method method-delete">DELETE</span>
+            <strong>D</strong>elete <span class="method method-delete">DELETE</span> - удаление ресурса по его id.
         </li>
     </ul>
 </section>
@@ -163,14 +158,29 @@
                 <li class="next">MarkDown/reStructuredText</li>
                 <li class="next">Google Docs/Tables</li>
                 <li class="next">В комментариях кода</li>
-                <li class="next">и т.п.</li>
             </ul>
         </li>
-        <li class="next">Использовать готовые сервисы</li>
+    </ol>
+</section>
+<section class="slide black">
+    <img src="pictures/bike.jpg" alt="" class="bike cover">
+</section>
+<section class="slide">
+    <h2>Какие есть варианты?</h2>
+    <ol>
+        <li>Описывать вручную:
+            <ul>
+                <li>На бумаге</li>
+                <li>MarkDown/reStructuredText</li>
+                <li>Google Docs/Tables</li>
+                <li>В комментариях кода</li>
+            </ul>
+        </li>
+        <li class="next">Использовать готовые сервисы и фреймворки</li>
     </ol>
 </section>
 <section class="slide services">
-    <h2>Сервисы для документирования API</h2>
+    <h2 class="title-services">Готовые решения для документирования API</h2>
     <div class="services">
         <img src="pictures/swagger_logo.png" alt="" class="swagger">
         <img src="pictures/services/apiary.png" alt="" class="apiary">
@@ -181,12 +191,13 @@
         <img src="pictures/services/apigen.png" alt="" class="apigen">
         <img src="pictures/services/apimatic.png" alt="" class="apimatic">
         <img src="pictures/services/mashape.jpg" alt="" class="mashape">
+        <img src="pictures/services/mrDoc.jpeg" alt="" class="mrdoc">
         <img src="pictures/services/phpdocumenter.png" alt="" class="phpdocumenter">
-        <div class="wsdl"><b>WSDL</b></div>
+        <img src="pictures/services/turnapi.png" alt="" class="turnapi">
     </div>
 </section>
 <section class="slide services">
-    <h2>Сервисы для документирования API</h2>
+    <h2 class="title-services">Готовые решения для документирования API</h2>
     <div class="services">
         <img src="pictures/swagger_logo.png" alt="" class="swagger">
         <img src="pictures/services/apiary.png" alt="" class="apiary">
@@ -196,20 +207,11 @@
         <img src="pictures/services/apigee.png" alt="" class="apigee">
         <img src="pictures/services/apimatic.png" alt="" class="apimatic">
         <img src="pictures/services/mashape.jpg" alt="" class="mashape">
-        <div class="wsdl"><b>WSDL</b></div>
+        <img src="pictures/services/turnapi.png" alt="" class="turnapi">
     </div>
 </section>
 <section class="slide services">
-    <h2>Сервисы для документирования API</h2>
-    <div class="services">
-        <img src="pictures/swagger_logo.png" alt="" class="swagger">
-        <img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
-        <img src="pictures/services/ramllogo.png" alt="" class="raml">
-        <div class="wsdl"><b>WSDL</b></div>
-    </div>
-</section>
-<section class="slide services">
-    <h2>Сервисы для документирования API</h2>
+    <h2 class="title-services">Готовые решения для документирования API</h2>
     <div class="services">
         <img src="pictures/swagger_logo.png" alt="" class="swagger">
         <img src="pictures/services/apiblueprint.jpeg" alt="" class="apiblueprint">
@@ -217,26 +219,36 @@
     </div>
 </section>
 <section class="slide vendors-blueprint">
-    <h2>Вендоры api blueprint</h2>
-    <img src="pictures/services/apiary.png" alt="" class="apiary">
+    <h2>Вендоры API Blueprint</h2>
+    <div class="vendors-blueprint__container">
+        <img src="pictures/services/apiary.png" alt="" class="apiary">
+    </div>
 </section>
 <section class="slide vendors-raml">
     <h2>Вендоры RAML</h2>
-    <img src="pictures/vendors/raml/akana.png" alt="" class="akana">
-    <img src="pictures/vendors/raml/amazonwebservices.zip_.png" alt="" class="amazone">
-    <img src="pictures/vendors/raml/apifortress.png" alt="" class="apifortress">
-    <img src="pictures/vendors/raml/apimatic.png" alt="" class="apimatic">
-    <img src="pictures/vendors/raml/apimetrics_0.png" alt="" class="apimetrics">
-    <img src="pictures/vendors/raml/apiscience.png" alt="" class="apiscience">
-    <img src="pictures/vendors/raml/catechnologies.png" alt="" class="catechnologies">
-    <img src="pictures/vendors/raml/gelato.jpg" alt="" class="gelato">
-    <img src="pictures/vendors/raml/mulesoft.jpg" alt="" class="mulesoft">
-    <img src="pictures/vendors/raml/oracle.png" alt="" class="oracle">
-    <img src="pictures/vendors/raml/parasoft.png" alt="" class="parasoft">
-    <img src="pictures/vendors/raml/postman.png" alt="" class="postman">
-    <img src="pictures/vendors/raml/restlet.png" alt="" class="restlet">
-    <img src="pictures/vendors/raml/restunited.png" alt="" class="restunited">
-    <img src="pictures/vendors/raml/softwareag.png" alt="" class="softwareag">
+    <div class="vendors-raml__container">
+        <img src="pictures/vendors/raml/softwareag.png" alt="" class="softwareag">
+        <img src="pictures/vendors/raml/restunited.png" alt="" class="restunited">
+        <img src="pictures/vendors/raml/restlet.png" alt="" class="restlet">
+        <img src="pictures/vendors/raml/parasoft.png" alt="" class="parasoft">
+    </div>
+    <div class="vendors-raml__container">
+        <img src="pictures/vendors/raml/postman.png" alt="" class="postman">
+        <img src="pictures/vendors/raml/oracle.png" alt="" class="oracle">
+        <img src="pictures/vendors/raml/mulesoft.jpg" alt="" class="mulesoft">
+        <img src="pictures/vendors/raml/gelato.jpg" alt="" class="gelato">
+    </div>
+    <div class="vendors-raml__container">
+        <img src="pictures/vendors/raml/catechnologies.png" alt="" class="catechnologies">
+        <img src="pictures/vendors/raml/apiscience.png" alt="" class="apiscience">
+        <img src="pictures/vendors/raml/apimetrics_0.png" alt="" class="apimetrics">
+        <img src="pictures/vendors/raml/apimatic.png" alt="" class="apimatic">
+    </div>
+    <div class="vendors-raml__container">
+        <img src="pictures/vendors/raml/apifortress.png" alt="" class="apifortress">
+        <img src="pictures/vendors/raml/amazonwebservices.zip_.png" alt="" class="amazone">
+        <img src="pictures/vendors/raml/akana.png" alt="" class="akana">
+    </div>
 </section>
 <section class="slide vendors-swagger">
     <h2>Вендоры Swagger</h2>
@@ -271,137 +283,11 @@
 <section class="slide">
     <img src="pictures/vendors/swagger/OpenAPI_Pantone.png" alt="" class="shout grow openapi">
 </section>
-<!--<section class="slide black">-->
-    <!--<img class="cover oscar" src="pictures/oscar.gif" alt="">-->
-<!--</section>-->
 <section class="slide black">
     <img class="cover oscar" src="pictures/oscar2.gif" alt="">
 </section>
 <section class="slide">
     <img src="pictures/API_Awards_Graphics.jpg" alt="" class="shout grow award">
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Спонсор</th>
-            <td>Apiary</td>
-            <td>MuleSoft</td>
-            <td>SmartBear</td>
-        </tr>
-        <tr>
-            <th scope="row">Формат</th>
-            <td>Markdown</td>
-            <td>YAML</td>
-            <td>YAML, JSON</td>
-        </tr>
-        <tr>
-            <th scope="row">Версия</th>
-            <td>1A9</td>
-            <td>1.0</td>
-            <td>2.0</td>
-        </tr>
-        <tr>
-            <th scope="row">Разработка</th>
-            <td>Апрель 2013</td>
-            <td>Сентябрь 2013</td>
-            <td>Июль 2011</td>
-        </tr>
-        <tr>
-            <th scope="row">Стандарты</th>
-            <td>-</td>
-            <td>-</td>
-            <td><span class="label">Open API Initiative</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Спонсор</th>
-            <td>Apiary</td>
-            <td>MuleSoft</td>
-            <td>SmartBear</td>
-        </tr>
-        <tr>
-            <th scope="row">Формат</th>
-            <td>Markdown</td>
-            <td>YAML</td>
-            <td>YAML, JSON</td>
-        </tr>
-        <tr>
-            <th scope="row">Версия</th>
-            <td>1A9</td>
-            <td>1.0</td>
-            <td>2.0</td>
-        </tr>
-        <tr>
-            <th scope="row">Разработка</th>
-            <td>Апрель 2013</td>
-            <td>Сентябрь 2013</td>
-            <td>Июль 2011</td>
-        </tr>
-        <tr>
-            <th scope="row">Стандарты</th>
-            <td>-</td>
-            <td>-</td>
-            <td><span class="label green-label">Open API Initiative</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col" width="450"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Query параметры</th>
-            <td>+</td>
-            <td>+</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <th scope="row">Path/URL параметры</th>
-            <td>+</td>
-            <td>+</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <th scope="row">Header параметры</th>
-            <td>+</td>
-            <td>+</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <th scope="row">Представления (status codes, mime-types)</th>
-            <td>+</td>
-            <td>+</td>
-            <td>+</td>
-        </tr>
-        <tr>
-            <th scope="row">Аутентификация</th>
-            <td>+</td>
-            <td>+</td>
-            <td>+</td>
-        </tr>
-    </table>
 </section>
 <section class="slide">
     <h2>Подход к проектированию API</h2>
@@ -428,7 +314,7 @@
     </div>
 </section>
 <section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (Поддерживаемы языки)</h2>
+    <h2>Сравним API Blueprint, RAML и Swagger (Поддерживаемые языки)</h2>
     <table class="striped">
         <tr>
             <th scope="col"></th>
@@ -457,315 +343,33 @@
         </tr>
         <tr>
             <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label">8387</span></td>
+            <td>1075</td>
+            <td>655</td>
+            <td><span class="label green-label">8776</span></td>
         </tr>
         <tr>
             <th scope="row">GitHub Stars</th>
-            <td><span class="label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
+            <td>5320</td>
+            <td>2715</td>
+            <td><span class="label green-label">7947</span></td>
         </tr>
         <tr>
             <th scope="row">GitHub contributors</th>
             <td>44</td>
             <td>18</td>
-            <td><span class="label">189</span></td>
+            <td><span class="label green-label">195</span></td>
         </tr>
         <tr>
             <th scope="row">GitHub whatchers</th>
             <td>180</td>
             <td>155</td>
-            <td><span class="label">467</span></td>
+            <td><span class="label green-label">473</span></td>
         </tr>
         <tr>
             <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label">4109</span></td>
-        </tr>
-        <tr>
-            <th scope="row">Google search (2016)</th>
-            <td>>350K</td>
-            <td>>85K</td>
-            <td><span class="label">>733K</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label green-label">8387</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub Stars</th>
-            <td><span class="label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub contributors</th>
-            <td>44</td>
-            <td>18</td>
-            <td><span class="label">189</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub whatchers</th>
-            <td>180</td>
-            <td>155</td>
-            <td><span class="label">467</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label">4109</span></td>
-        </tr>
-        <tr>
-            <th scope="row">Google search (2016)</th>
-            <td>>350K</td>
-            <td>>85K</td>
-            <td><span class="label">>733K</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label green-label">8387</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub Stars</th>
-            <td><span class="label pupure-label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub contributors</th>
-            <td>44</td>
-            <td>18</td>
-            <td><span class="label">189</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub whatchers</th>
-            <td>180</td>
-            <td>155</td>
-            <td><span class="label">467</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label">4109</span></td>
-        </tr>
-        <tr>
-            <th scope="row">Google search (2016)</th>
-            <td>>350K</td>
-            <td>>85K</td>
-            <td><span class="label">>733K</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label green-label">8387</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub Stars</th>
-            <td><span class="label pupure-label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub contributors</th>
-            <td>44</td>
-            <td>18</td>
-            <td><span class="label green-label">189</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub whatchers</th>
-            <td>180</td>
-            <td>155</td>
-            <td><span class="label">467</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label">4109</span></td>
-        </tr>
-        <tr>
-            <th scope="row">Google search (2016)</th>
-            <td>>350K</td>
-            <td>>85K</td>
-            <td><span class="label">>733K</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label green-label">8387</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub Stars</th>
-            <td><span class="label pupure-label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub contributors</th>
-            <td>44</td>
-            <td>18</td>
-            <td><span class="label green-label">189</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub whatchers</th>
-            <td>180</td>
-            <td>155</td>
-            <td><span class="label green-label">467</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label">4109</span></td>
-        </tr>
-        <tr>
-            <th scope="row">Google search (2016)</th>
-            <td>>350K</td>
-            <td>>85K</td>
-            <td><span class="label">>733K</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label green-label">8387</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub Stars</th>
-            <td><span class="label pupure-label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub contributors</th>
-            <td>44</td>
-            <td>18</td>
-            <td><span class="label green-label">189</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub whatchers</th>
-            <td>180</td>
-            <td>155</td>
-            <td><span class="label green-label">467</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label green-label">4109</span></td>
-        </tr>
-        <tr>
-            <th scope="row">Google search (2016)</th>
-            <td>>350K</td>
-            <td>>85K</td>
-            <td><span class="label">>733K</span></td>
-        </tr>
-    </table>
-</section>
-<section class="slide">
-    <h2>Сравним API Blueprint, RAML и Swagger (популярность на 2017)</h2>
-    <table class="striped">
-        <tr>
-            <th scope="col"></th>
-            <th>API Blueprint</th>
-            <th>RAML</th>
-            <th>Swagger</th>
-        </tr>
-        <tr>
-            <th scope="row">Stackoverflow questions</th>
-            <td>1057</td>
-            <td>644</td>
-            <td><span class="label green-label">8387</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub Stars</th>
-            <td><span class="label pupure-label">5190</span></td>
-            <td>2670</td>
-            <td>4109</td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub contributors</th>
-            <td>44</td>
-            <td>18</td>
-            <td><span class="label green-label">189</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub whatchers</th>
-            <td>180</td>
-            <td>155</td>
-            <td><span class="label green-label">467</span></td>
-        </tr>
-        <tr>
-            <th scope="row">GitHub forks</th>
-            <td>1466</td>
-            <td>434</td>
-            <td><span class="label green-label">4109</span></td>
+            <td>1492</td>
+            <td>455</td>
+            <td><span class="label green-label">4212</span></td>
         </tr>
         <tr>
             <th scope="row">Google search (2016)</th>
@@ -776,10 +380,40 @@
     </table>
 </section>
 <section class="slide">
-    <h2>Поговорим про Swagger</h2>
-    <img src="pictures/swag.jpg" alt="" class="next swag">
+    <h2>Активность API Blueprint</h2>
+    <img src="pictures/github/api-blueprint.png" alt="" class="cover">
 </section>
-<section class="slide swagger-full">
+<section class="slide">
+    <h2>Активность RAML (Spec)</h2>
+    <img src="pictures/github/raml-spec.png" alt="" class="cover">
+</section>
+<section class="slide">
+    <h2>Активность RAML (API Designer)</h2>
+    <img src="pictures/github/api-designer.png" alt="" class="cover">
+</section>
+<section class="slide">
+    <h2>Активность Swagger (Core)</h2>
+    <img src="pictures/github/swagger-core.png" alt="" class="cover">
+</section>
+<section class="slide">
+    <h2>Активность Swagger (UI)</h2>
+    <img src="pictures/github/swagger-ui.png" alt="" class="cover">
+</section>
+<section class="slide">
+    <h2>Активность Swagger (Editor)</h2>
+    <img src="pictures/github/swagger-editor.png" alt="" class="cover">
+</section>
+<section class="slide">
+    <h2>Активность Swagger (Codegen)</h2>
+    <img src="pictures/github/swagger-codegen.png" alt="" class="cover">
+</section>
+<section class="slide">
+    <h2 class="shout">Поговорим про Swagger</h2>
+</section>
+<section class="slide black">
+    <img src="pictures/swag.jpg" alt="" class="swag cover">
+</section>
+<section class="slide swagger-full cover">
     <img src="pictures/swagger.png" alt="" class="shout grow swagger-hi">
 </section>
 <section class="slide">
@@ -794,79 +428,876 @@
 </section>
 <section class="slide">
     <h2>Swagger UI</h2>
-    <img src="pictures/ui1.png" alt="" class="ui1">
+    <img src="pictures/swagger-ui2.png" alt="" class="swagger-ui2">
+    <h2 class="next swagger-ui2-h">(v2.x)</h2>
+    <h2 class="next swagger-ui3-h">&rarr; (v3.x)</h2>
+    <img src="pictures/swagger-ui3.png" alt="" class="swagger-ui3 next">
 </section>
 <section class="slide">
-    <h2>UI конкурентов</h2>
+    <h2>Swagger UI (v2.x)</h2>
     <ul>
-        <li>
-            <a href="http://docs.pandurangpatil.apiary.io/#">API Blueprint (apiary)</a>
-        </li>
-        <li>
-            <a href="https://anypoint.mulesoft.com/apiplatform/popular/#/portals/organizations/52560d3f-c37a-409d-9887-79e0a9a9ecff/apis/5502/versions/5487/pages/30295">RAML</a>
-        </li>
+        <li class="next">Поддерживаемые версии OpenAPI Specification: <b>1.1</b>, <b>1.2</b>, <b>2.0</b></li>
+        <li class="next">Много файлов используется при разворачивании</li>
+        <li class="next">Поддерживает мультиязычность</li>
     </ul>
 </section>
 <section class="slide">
-    <h2>Swagger UI</h2>
-    <h2 class="shout"><a href="http://localhost:8000/api_doc/">Живой пример</a></h2>
+    <h2>Swagger UI (v3.x)</h2>
+    <ul>
+        <li class="next">Поддерживаемые версии OpenAPI Specification: <b>2.0</b></li>
+        <li class="next">Компактно разворачивается</li>
+        <li class="next">Отсутствует мультиязычность</li>
+        <li class="next">Доступна только часть ранее поддерживаемых параметров, например body-параметры пока не поддерживаются</li>
+        <li class="next">Редактор JSON формы не реализован</li>
+        <li class="next">Поддержка относительных путей для внешних файлов не реализована</li>
+    </ul>
 </section>
 <section class="slide">
-    <h2>Как мы получили такую документацию?</h2>
+    <h2>Рассмотрим Top-Down реализацию</h2>
+    <div class="realaze-top-down">
+        Написанное API
+    </div>
+    <img src="pictures/Top-down.png" alt="" class="top-down-release">
+    <div class="specification-top-down">
+        Спецификация к API
+    </div>
+</section>
+<section class="slide">
+    <h2>Структура нашего API для библиотеки</h2>
+    <div>
+        <img src="pictures/folder.png" alt="" class="folder">
+        <span>controllers</span>
+        <span class="next">
+            <span>&rarr;</span>
+            <img src="pictures/js-file.png" alt="" class="js-file">
+            <span>bookController.js</span>
+        </span>
+    </div>
+    <div>
+        <img src="pictures/folder.png" alt="" class="folder">
+        <span>models</span>
+        <span class="next">
+            <span>&rarr;</span>
+            <img src="pictures/js-file.png" alt="" class="js-file">
+            <span>bookModel.js</span>
+        </span>
+    </div>
+    <div>
+        <img src="pictures/folder.png" alt="" class="folder">
+        <span>routes</span>
+        <span class="next">
+            <span>&rarr;</span>
+            <img src="pictures/js-file.png" alt="" class="js-file">
+            <span>bookRoutes.js</span>
+        </span>
+    </div>
+    <div>
+        <img src="pictures/js-file.png" alt="" class="folder">
+        <span>app.js</span>
+    </div>
+</section>
+<section class="slide">
+    <h2>Как нам получиь документацию?</h2>
+    <pre class="next">
+		<code>npm i swagger-jsdoc</code>
+	</pre>
+    <h3 class="next">Swagger UI (v2.x)</h3>
     <pre>
-		<code class="next">swagger-ui</code>
-		<code class="next">swagger-jsdoc</code>
+		<code class="next">npm i swagger-ui@<mark>2.2.10</mark></code>
+	</pre>
+    <h3 class="next">Swagger UI (v3.x)</h3>
+    <pre>
+		<code class="next">npm i swagger-ui-dist</code>
 	</pre>
 </section>
-<section class="slide">
-    <h2>
-        <a href="https://github.com/ArtKuz/rest-api-documentation-nodejs-swagger-example">Репозиторий с примером</a>
-    </h2>
-    <img src="pictures/qr-code-api.gif" alt="" class="qr-api"/>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="next annotate">  /**</code>
+        <code class="next annotate">  * <mark>@swagger</mark></code>
+        <code class="next annotate">  * /api/books:</code>
+        <code class="next annotate">  *   <mark>get</mark>:</code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code>  .get(bookController.get);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="annotate">  /**</code>
+        <code class="annotate">  * <mark>@swagger</mark></code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   <mark>get</mark>:</code>
+        <code class="next annotate">  *     <mark>tags</mark>:</code>
+        <code class="next annotate">  *       - Books</code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code>  .get(bookController.get);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/tag.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="annotate">  /**</code>
+        <code class="annotate">  * <mark>@swagger</mark></code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   <mark>get</mark>:</code>
+        <code class="annotate">  *     <mark>tags</mark>:</code>
+        <code class="annotate">  *       - Books</code>
+        <code class="next annotate">  *     <mark>description</mark>: Получить список книг</code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code>  .get(bookController.get);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/description.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="annotate">  /**</code>
+        <code class="annotate">  * <mark>@swagger</mark></code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   <mark>get</mark>:</code>
+        <code class="annotate">  *     <mark>tags</mark>:</code>
+        <code class="annotate">  *       - Books</code>
+        <code class="annotate">  *     <mark>description</mark>: Получить список книг</code>
+        <code class="next annotate">  *     <mark>produces</mark>:</code>
+        <code class="next annotate">  *       - application/json</code>
+        <code class="next annotate">  *     <mark>parameters</mark>:</code>
+        <code class="next annotate">  *       - name: genre</code>
+        <code class="next annotate">  *         description: Жанр</code>
+        <code class="next annotate">  *         in: query</code>
+        <code class="next annotate">  *         type: string</code>
+        <code class="next annotate">  *         enum: ['ужасы', 'обучение', 'фантастика', 'фэнтези']</code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code class="annotate"> </code>
+        <code>  .get(bookController.get);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/genre.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/genre-open.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="annotate">  /**</code>
+        <code class="annotate">  * <mark>@swagger</mark></code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   <mark>get</mark>:</code>
+        <code class="annotate">  *     <mark>tags</mark>:</code>
+        <code class="annotate">  *       - Books</code>
+        <code class="annotate">  *     <mark>description</mark>: Получить список книг</code>
+        <code class="annotate">  *     <mark>produces</mark>:</code>
+        <code class="annotate">  *       - application/json</code>
+        <code class="annotate">  *     <mark>parameters</mark>:</code>
+        <code class="annotate">  *       - name: genre</code>
+        <code class="annotate">  *         description: Жанр</code>
+        <code class="annotate">  *         in: query</code>
+        <code class="annotate">  *         type: string</code>
+        <code class="annotate">  *         enum: ['ужасы', 'обучение', 'фантастика', 'фэнтези']</code>
+        <code class="next annotate">  *     <mark>responses</mark>:</code>
+        <code class="next annotate">  *       200:</code>
+        <code class="next annotate">  *         <mark>description</mark>: Ok</code>
+        <code class="next annotate">  *       500:</code>
+        <code class="next annotate">  *         <mark>description</mark>: Internal Server Error</code>
+        <code class="next annotate">  */</code>
+        <code>  .get(bookController.get);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/responses.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-try.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-response-1.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-response-2.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-response-3.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-response-4.png" alt="" class="cover">
 </section>
 <section class="slide">
-    <h2 class="shout">Как это выглядит в коде?</h2>
+    <div>
+        <img src="pictures/folder.png" alt="" class="folder">
+        <span>models</span>
+        <span>
+            <span>&rarr;</span>
+            <img src="pictures/js-file.png" alt="" class="js-file">
+            <span>bookModel.js</span>
+        </span>
+    </div>
+    <div class="next yaml-path">
+        <span>&rarr;</span>
+        <img src="pictures/yaml-file.png" alt="" class="js-file">
+        <span>bookModel.yaml</span>
+    </div>
+</section>
+<section class="slide code big">
+    <pre>
+        <code><mark>parameters</mark>:</code>
+		<code class="next">  title:</code>
+		<code class="next">    <mark>name</mark>: title</code>
+		<code class="next">    <mark>description</mark>: Название книги</code>
+		<code class="next">    <mark>in</mark>: formData</code>
+		<code class="next">    <mark>required</mark>: true</code>
+		<code class="next">    <mark>type</mark>: string</code>
+		<code class="next">  author:</code>
+		<code class="next">    <mark>name</mark>: author</code>
+		<code class="next">    <mark>description</mark>: Автор</code>
+		<code class="next">    <mark>in</mark>: formData</code>
+		<code class="next">    <mark>type</mark>: string</code>
+		<code class="next">  genre:</code>
+		<code class="next">    <mark>name</mark>: genre</code>
+		<code class="next">    <mark>description</mark>: Жанр</code>
+		<code class="next">    <mark>in</mark>: formData</code>
+		<code class="next">    <mark>type</mark>: string</code>
+		<code class="next">    <mark>enum</mark>: ['ужасы', 'детский', 'обучение', 'фантастика', 'фэнтези']</code>
+		<code class="next">  read:</code>
+		<code class="next">    <mark>name</mark>: read</code>
+		<code class="next">    <mark>description</mark>: Прочитана</code>
+		<code class="next">    <mark>in</mark>: formData</code>
+		<code class="next">    <mark>type</mark>: boolean</code>
+	</pre>
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="next annotate">  /**</code>
+        <code class="next annotate">  * <mark>@swagger</mark></code>
+        <code class="next annotate">  * /api/books:</code>
+        <code class="next annotate">  *   <mark>post</mark>:</code>
+        <code class="next annotate">  *     <mark>tags</mark>:</code>
+        <code class="next annotate">  *       - Books</code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code class="annotate">  .post(bookController.post);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="annotate">  /**</code>
+        <code class="annotate">  * <mark>@swagger</mark></code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   <mark>post</mark>:</code>
+        <code class="annotate">  *     <mark>tags</mark>:</code>
+        <code class="annotate">  *       - Books</code>
+        <code class="next annotate">  *     <mark>description</mark>: Добавить новую книгу</code>
+        <code class="next annotate">  *     <mark>produces</mark>:</code>
+        <code class="next annotate">  *       - application/json</code>
+        <code class="next annotate">  *     <mark>parameters</mark>:</code>
+        <code class="next annotate">  *       - <mark>$ref</mark>: '#/parameters/title'</code>
+        <code class="next annotate">  *       - <mark>$ref</mark>: '#/parameters/author'</code>
+        <code class="next annotate">  *       - <mark>$ref</mark>: '#/parameters/genre'</code>
+        <code class="next annotate">  *       - <mark>$ref</mark>: '#/parameters/read'</code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code>  .post(bookController.post);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-params.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>bookRouter</code>
+        <code>  .route('/')</code>
+        <code class="annotate">  /**</code>
+        <code class="annotate">  * <mark>@swagger</mark></code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   <mark>post</mark>:</code>
+        <code class="annotate">  *     <mark>tags</mark>:</code>
+        <code class="annotate">  *       - Books</code>
+        <code class="annotate">  *     <mark>description</mark>: Добавить новую книгу</code>
+        <code class="annotate">  *     <mark>produces</mark>:</code>
+        <code class="annotate">  *       - application/json</code>
+        <code class="annotate">  *     <mark>parameters</mark>:</code>
+        <code class="annotate">  *       - <mark>$ref</mark>: '#/parameters/title'</code>
+        <code class="annotate">  *       - <mark>$ref</mark>: '#/parameters/author'</code>
+        <code class="annotate">  *       - <mark>$ref</mark>: '#/parameters/genre'</code>
+        <code class="annotate">  *       - <mark>$ref</mark>: '#/parameters/read'</code>
+        <code class="next annotate">  *     <mark>responses</mark>:</code>
+        <code class="next annotate">  *       201:</code>
+        <code class="next annotate">  *         <mark>description</mark>: Created</code>
+        <code class="next annotate">  *       400:</code>
+        <code class="next annotate">  *         <mark>description</mark>: Bad Request</code>
+        <code class="next annotate">  */</code>
+        <code>  .post(bookController.post);</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-try-1.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-try-2.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-response-1.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-response-2.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-response-3.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/post-response-4.png" alt="" class="cover">
 </section>
 <section class="slide">
-    <img src="pictures/get_white.png" alt="" class="get">
+    <h2>Опишем подобным образом другие методы</h2>
+    <pre>
+        <code>...</code>
+        <code>bookRouter</code>
+        <code>  .route('/:bookId')</code>
+        <code class="next">  .get((req, res) => { ... })</code>
+        <code class="next">  .put((req, res) => { ... })</code>
+        <code class="next">  .patch((req, res) => { ... })</code>
+        <code class="next">  .delete((req, res) => { ... });</code>
+        <code>...</code>
+    </pre>
 </section>
-<section class="slide">
-    <img src="pictures/post_white.png" alt="" class="post">
+<section class="slide black">
+    <img src="pictures/ui/all.png" alt="" class="cover">
 </section>
-<section class="slide">
-    <img src="pictures/yaml_white.png" alt="" class="yaml">
-</section>
-<section class="slide">
+<section class="slide code small">
     <h2>А если нужно пометить метод, как deprecated?</h2>
-    <img src="pictures/deprecated_code_white.png" alt="" class="next deprecated-code">
+    <pre>
+        <code>...</code>
+		<code>bookRouter</code>
+		<code>  .route('/author')</code>
+	    <code class="annotate">  /**</code>
+        <code class="annotate">  * @swagger</code>
+        <code class="annotate">  * /api/books:</code>
+        <code class="annotate">  *   get:</code>
+        <code class="next annotate">  *     <mark>deprecated</mark>: true</code>
+        <code class="annotate">  * ...</code>
+        <code class="annotate">  *     produces:</code>
+        <code class="annotate">  *       - application/json</code>
+        <code class="annotate">  *     parameters:</code>
+        <code class="annotate">  *       - $ref: '#/parameters/author'</code>
+        <code class="annotate">  * ...</code>
+        <code class="annotate">  */</code>
+		<code>  .get(bookController.get);</code>
+        <code>...</code>
+	</pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-deprecated.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-deprecated-2.png" alt="" class="cover">
+</section>
+<section class="slide black">
+    <img src="pictures/ui/get-deprecated-ui3.png" alt="" class="cover">
 </section>
 <section class="slide">
-    <h2>Как deprecated метод отобразится в документации?</h2>
-    <img src="pictures/deprecated_doc.png" alt="" class="next deprecated_doc">
+    <h2>Как теперь собрать документацию?</h2>
+    <div class="next">
+        <img src="pictures/js-file.png" alt="" class="js-file">
+        <span>app.js</span>
+    </div>
+</section>
+<section class="slide code big">
+    <pre>
+        <code>...</code>
+        <code class="next">const swaggerSpec = require('swagger-jsdoc')({</code>
+        <code class="next">  <mark>swaggerDefinition</mark>: {</code>
+        <code class="next">    <mark>swagger</mark>: '2.0',</code>
+        <code class="next">    <mark>info</mark>: {</code>
+        <code class="next">      <mark>title</mark>: 'Library API',</code>
+        <code class="next">      <mark>version</mark>: '1.0.0',</code>
+        <code class="next">      <mark>description</mark>: 'API для библиотеки'</code>
+        <code class="next">    },</code>
+        <code class="next">    <mark>host</mark>: `localhost:${port}`,</code>
+        <code class="next">    <mark>basePath</mark>: '/',</code>
+        <code class="next">    <mark>schemes</mark>: [</code>
+        <code class="next">      'http'</code>
+        <code class="next">    ]</code>
+        <code class="next">  },</code>
+        <code class="next">  <mark>apis</mark>: ['./routes/*.js', './models/*.yaml']</code>
+        <code class="next">});</code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code> </code>
+        <code>...</code>
+    </pre>
+</section>
+<section class="slide black">
+    <img src="pictures/ui/info.png" alt="" class="cover">
+</section>
+<section class="slide code big">
+    <pre>
+        <code>...</code>
+        <code>const swaggerSpec = require('swagger-jsdoc')({</code>
+        <code>  <mark>swaggerDefinition</mark>: {</code>
+        <code>    <mark>swagger</mark>: '2.0',</code>
+        <code>    <mark>info</mark>: {</code>
+        <code>      <mark>title</mark>: 'Library API',</code>
+        <code>      <mark>version</mark>: '1.0.0',</code>
+        <code>      <mark>description</mark>: 'API для библиотеки'</code>
+        <code>    },</code>
+        <code>    <mark>host</mark>: `localhost:${port}`,</code>
+        <code>    <mark>basePath</mark>: '/',</code>
+        <code>    <mark>schemes</mark>: [</code>
+        <code>      'http'</code>
+        <code>    ]</code>
+        <code>  },</code>
+        <code>  <mark>apis</mark>: ['./routes/*.js', './models/*.yaml']</code>
+        <code>});</code>
+        <code class="next">app.get('/swagger.json', function(req, res) {</code>
+        <code class="next">  res.setHeader('Content-Type', 'application/json');</code>
+        <code class="next">  res.send(<mark>swaggerSpec</mark>);</code>
+        <code class="next">});</code>
+        <code class="next">app.use(express.static('public'));</code>
+        <code>...</code>
+    </pre>
+</section>
+<section class="slide">
+    <h2>Что должно лежать в public?</h2>
+    <div>
+        <img src="pictures/folder.png" alt="" class="folder">
+        <span>public</span>
+        <span class="next">
+            <span>&rarr;</span>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>api-doc</span>
+            <span class="next"> (Swagger UI)</span>
+        </span>
+    </div>
+</section>
+<section class="slide">
+    <h2>Swagger UI (v2.x)</h2>
+    <div class="folder-path-up">
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>css</span>
+        </div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>fonts</span>
+        </div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>images</span>
+        </div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>lang</span>
+        </div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>lib</span>
+        </div>
+        <div>
+            <img src="pictures/html-file.svg" alt="" class="folder">
+            <span>index.html</span>
+        </div>
+        <div>
+            <img src="pictures/html-file.svg" alt="" class="folder">
+            <span>o2c.html</span>
+        </div>
+        <div>
+            <img src="pictures/js-file.png" alt="" class="folder">
+            <span>swagger-ui.min.js</span>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <h2>Swagger UI (v2.x)</h2>
+    <div class="routes">
+        <img src="pictures/html-file.svg" alt="" class="folder">
+        <span>index.html</span>
+    </div>
+    <pre class="next">
+        <code>...</code>
+        <code class="next">&lt;script src='lang/<mark>ru.js</mark>' type='text/javascript'&gt;&lt;/script&gt;</code>
+        <code>...</code>
+        <code class="next">url = window.location.origin + "/<mark>swagger.json</mark>";</code>
+        <code>...</code>
+    </pre>
+</section>
+<section class="slide">
+    <h2>Swagger UI (v3.x)</h2>
+    <div class="folder-path-up">
+        <div>
+            <img src="pictures/png-file.png" alt="" class="folder">
+            <span>favicon-16x16.png</span>
+        </div>
+        <div>
+            <img src="pictures/png-file.png" alt="" class="folder">
+            <span>favicon-32x32.png</span>
+        </div>
+        <div>
+            <img src="pictures/html-file.svg" alt="" class="folder">
+            <span>index.html</span>
+        </div>
+        <div>
+            <img src="pictures/html-file.svg" alt="" class="folder">
+            <span>oauth2-redirect.html</span>
+        </div>
+        <div>
+            <img src="pictures/css-file.svg" alt="" class="folder">
+            <span>swagger-ui.css</span>
+        </div>
+        <div>
+            <img src="pictures/js-file.png" alt="" class="folder">
+            <span>swagger-ui.js</span>
+        </div>
+        <div>
+            <img src="pictures/js-file.png" alt="" class="folder">
+            <span>swagger-ui-bundle.js</span>
+        </div>
+        <div>
+            <img src="pictures/js-file.png" alt="" class="folder">
+            <span>swagger-ui-standalone-preset.js</span>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <h2>Swagger UI (v3.x)</h2>
+    <div class="routes">
+        <img src="pictures/html-file.svg" alt="" class="folder">
+        <span>index.html</span>
+    </div>
+    <pre class="next">
+        <code>...</code>
+        <code class="next">url: window.location.origin + "/<mark>swagger.json</mark>",</code>
+        <code>...</code>
+    </pre>
+</section>
+<section class="slide">
+    <h2>Посмотрим на результат</h2>
+    <ul>
+        <li>
+            <a href="http://localhost:8000/api-doc-ui2/">Swagger UI (v2.x)</a>
+        </li>
+        <li>
+            <a href="http://localhost:8000/api-doc-ui3/">Swagger UI (v3.x)</a>
+        </li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Рассмотрим Bottom-Up реализацию</h2>
+    <div class="realaze-top-down">
+        Спецификация к API
+    </div>
+    <img src="pictures/bottom-up.png" alt="" class="top-down-release">
+    <div class="specification-top-down">
+        Написанное API
+    </div>
 </section>
 <section class="slide">
     <h2>Swagger Editor</h2>
-    <img src="pictures/editor.png" alt="" class="editor">
-</section>
-<section class="slide">
-    <h2>Editor конкурентов</h2>
-    <ul>
-        <li>
-            <a href="http://static-anypoint-mulesoft-com.s3.amazonaws.com/API_examples_notebooks/raml-design2.html">RAML(v0.8) API Designer</a>
-        </li>
-    </ul>
-</section>
-<section class="slide">
-    <h2>Swagger Editor (локально и удаленно)</h2>
-    <p>
-        <a href="http://editor.swagger.io/#/">Swagger Editor</a>
-    </p>
     <pre>
 		<code class="next">npm i -g swagger</code>
-		<code class="next">swagger project create todo-api</code>
-		<code class="next">swagger project edit todo-api</code>
-		<code class="next">swagger project start todo-api</code>
-		<code class="next">swagger project start -m todo-api</code>
+		<code class="next">swagger project create library-api</code>
+		<code class="next comment">connect hapi restify sails <mark class="next">express</mark></code>
+		<code class="next">swagger project edit library-api</code>
+		<code class="next">swagger project start library-api</code>
+		<code class="next">swagger project start -m library-api</code>
+		<code class="next">swagger project test library-api</code>
+	</pre>
+</section>
+<section class="slide">
+    <h2 class="shout">
+        <a href="http://editor.swagger.io/#/">Swagger Editor</a>
+    </h2>
+</section>
+<section class="slide">
+    <h2>Структура нашего API</h2>
+    <div class="folder-path-up">
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>api</span>
+        </div>
+        <div class="folder-path-2">
+            <div>
+                <img src="pictures/folder.png" alt="" class="folder">
+                <span>controllers</span>
+            </div>
+            <div>
+                <img src="pictures/folder.png" alt="" class="folder">
+                <span>helpers</span>
+            </div>
+            <div>
+                <img src="pictures/folder.png" alt="" class="folder">
+                <span>mocks</span>
+            </div>
+            <div>
+                <img src="pictures/folder.png" alt="" class="folder">
+                <span>swagger</span>
+                <span class="next">
+                <span>&rarr;</span>
+                <img src="pictures/yaml-file.png" alt="" class="js-file">
+                <span>swagger.yaml</span>
+            </span>
+            </div>
+        </div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>config</span>
+            <span class="next">
+            <span>&rarr;</span>
+            <img src="pictures/yaml-file.png" alt="" class="js-file">
+            <span>default.yaml</span>
+        </span>
+        </div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>test</span>
+        </div>
+        <div>
+            <img src="pictures/js-file.png" alt="" class="folder">
+            <span>app.js</span>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <h2>Подключим Базу Данных</h2>
+    <div class="next routes">
+        <img src="pictures/js-file.png" alt="" class="js-file">
+        <span>app.js</span>
+    </div>
+    <h2 class="next">Добавим модель данны</h2>
+    <div class="next routes">
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>models</span>
+            <span class="next">
+                    <span>&rarr;</span>
+                    <img src="pictures/js-file.png" alt="" class="js-file">
+                    <span>bookModel.js</span>
+                </span>
+        </div>
+    </div>
+</section>
+<section class="slide code small">
+    <h2>Где писать код?</h2>
+    <div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>swagger</span>
+            <span class="next">
+                <span>&rarr;</span>
+                <img src="pictures/yaml-file.png" alt="" class="js-file">
+                <span>swagger.yaml</span>
+            </span>
+        </div>
+    </div>
+    <pre class="next">
+        <code>...</code>
+        <code>paths:</code>
+        <code>  /books:</code>
+        <code class="next">    <mark>x-swagger-router-controller</mark>: books</code>
+        <code>    get:</code>
+        <code>      ...</code>
+        <code class="next">      <mark>operationId</mark>: getAll</code>
+        <code>      parameters:</code>
+        <code>        ...</code>
+        <code>      responses:</code>
+        <code>        '200':</code>
+        <code>          description: Ok</code>
+        <code>        '500':</code>
+        <code>          description: Internal Server Error</code>
+        <code>...</code>
+    </pre>
+</section>
+<section class="slide code small">
+    <h2>Где писать код?</h2>
+    <div class="routes">
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>api</span>
+        </div>
+        <div class="folder-path-2">
+            <div>
+                <img src="pictures/folder.png" alt="" class="folder">
+                <span>controllers</span>
+                <span class="next">
+                    <span>&rarr;</span>
+                    <img src="pictures/js-file.png" alt="" class="js-file">
+                    <span>books.js</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slide code small">
+    <pre>
+        <code class="next">const Book = require('../models/bookModel');</code>
+        <code class="next">module.exports = {</code>
+        <code class="next">  getAll(req, res) {</code>
+        <code class="next">    const query = {};</code>
+        <code class="next"> </code>
+        <code class="next">    if (<mark>req.swagger.params.genre.value</mark>) { <span class="comment">// req.query.genre</span></code>
+        <code class="next">      query.genre = <mark>req.swagger.params.genre.value</mark>;</code>
+        <code class="next">    }</code>
+        <code class="next">    Book.find(query, (err, books) => {</code>
+        <code class="next">      if (err) {</code>
+        <code class="next">        res.status(500).send(err);</code>
+        <code class="next">      } else {</code>
+        <code class="next">        res.json(books);</code>
+        <code class="next">      }</code>
+        <code class="next">    })</code>
+        <code class="next">  },</code>
+        <code class="next">  post(req, res) {</code>
+        <code class="next">     ...</code>
+        <code class="next">  }</code>
+        <code class="next">};</code>
+    </pre>
+</section>
+<section class="slide code small">
+    <h2>Продолжаем писать код</h2>
+    <div>
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>swagger</span>
+            <span class="next">
+                <span>&rarr;</span>
+                <img src="pictures/yaml-file.png" alt="" class="js-file">
+                <span>swagger.yaml</span>
+            </span>
+        </div>
+    </div>
+    <pre class="next">
+        <code>...</code>
+        <code>paths:</code>
+        <code>  /books/{bookId}:</code>
+        <code class="next">    <mark>x-swagger-router-controller</mark>: booksId</code>
+        <code>    get:</code>
+        <code>      ...</code>
+        <code>    put:</code>
+        <code>      ...</code>
+        <code>    patch:</code>
+        <code>      ...</code>
+        <code>    delete:</code>
+        <code>      ...</code>
+        <code>...</code>
+    </pre>
+</section>
+<section class="slide code small">
+    <h2>Продолжаем писать код</h2>
+    <div class="routes">
+        <div>
+            <img src="pictures/folder.png" alt="" class="folder">
+            <span>api</span>
+        </div>
+        <div class="folder-path-2">
+            <div>
+                <img src="pictures/folder.png" alt="" class="folder">
+                <span>controllers</span>
+                <span class="next">
+                    <span>&rarr;</span>
+                    <img src="pictures/js-file.png" alt="" class="js-file">
+                    <span>booksId.js</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="slide">
+    <h2><a href="https://github.com/swagger-api/swagger-codegen">Swagger Codegen</a></h2>
+    <p class="next">Установка под OS X:</p>
+    <pre>
+		<code class="next"><mark>brew install swagger-codegen</mark></code>
+		<code class="next comment"># массив поддерживаемых языков</code>
+		<code class="next">swagger-codegen</code>
+        <code class="next comment"># сгенерировать код под Ruby</code>
+		<code class="next">swagger-codegen \</code>
+		<code class="next">  <mark>generate -i</mark> http://localhost:8000/swagger.json \</code>
+		<code class="next">  <mark>-l</mark> ruby \</code>
+		<code class="next">  <mark>-o</mark> /tmp/test/</code>
 	</pre>
 </section>
 <section class="slide">
@@ -878,34 +1309,73 @@
     <img src="pictures/client.png" alt="" class="client">
 </section>
 <section class="slide">
-    <h2>Swagger + Confluence</h2>
-    <h2 class="shout"><a href="https://confluence.slkdev.net/display/DEMO/Swagger+Confluence+Demos">Пример</a></h2>
-</section>
-<section class="slide">
-    <h2>Swagger (JSON)</h2>
-    <h2 class="shout"><a href="./swagger.json">Пример</a></h2>
-</section>
-<section class="slide">
-    <h2>Swagger (HTML)</h2>
+    <h2>Примеры</h2>
     <ul>
-        <li><a href="./html.html">Пример 1</a></li>
-        <li><a href="./html2.html">Пример 2</a></li>
+        <li>
+            <a href="https://confluence.slkdev.net/display/DEMO/Swagger+Confluence+Demos">Swagger + Confluence</a>
+        </li>
+        <li>
+            <a href="./swagger.json">Swagger JSON</a>
+        </li>
+        <li>
+            <a href="./swagger.yaml">Swagger YAML</a>
+        </li>
+        <li>
+            <a href="./html.html">Swagger (HTML old)</a>
+        </li>
+        <li>
+            <a href="./html2.html">Swagger (HTML)</a>
+        </li>
+    </ul>
+</section>
+<section class="slide">
+    <h2>Swagger и IDE</h2>
+    <ul>
+        <li class="next">
+            JetBrains WebStorm
+            <ol>
+                <li class="next">
+                    Swagger Codegen
+                </li>
+                <li class="next">
+                    Swagger Plugin
+                </li>
+            </ol>
+        </li>
+        <li class="next">
+            Visual Studio Code
+            <ol>
+                <li class="next">
+                    Swagger Viewer / Swagger Doc Viewer
+                </li>
+                <li class="next">
+                    swaggitor (validator)
+                </li>
+            </ol>
+        </li>
+        <li class="next">
+            Atom
+            <ol>
+                <li class="next">
+                    linter-swagger-improved / linter-swagger
+                </li>
+            </ol>
+        </li>
     </ul>
 </section>
 <section class="slide">
     <h2>Можно ли тестировать полученную документацию?</h2>
     <ul>
-        <li class="next">Да</li>
-        <li class="next">Можно парсить получаемый JSON/YAML и сопоставлять пути и параметры с теми, что описаны в коде
-        </li>
+        <li class="next">Можно парсить получаемый JSON/YAML и сопоставлять пути и параметры с теми, что описаны в коде</li>
         <li class="next">JSON Schema validator</li>
+        <li class="next"><a href="https://github.com/earldouglas/swagger-test">swagger-test</a> расширяет возможности спецификации</li>
     </ul>
 </section>
 <section class="slide">
     <h2>Выводы по Swagger</h2>
     <ul>
-        <li class="next">Большое сообщество и экосистема (> 45 сервисов)</li>
-        <li class="next">Поддержка большого количества языков (> 13)</li>
+        <li class="next">Большое сообщество и экосистема</li>
+        <li class="next">Поддержка большого количества языков</li>
         <li class="next">Богатая спецификация</li>
         <li class="next">Поддержка JSON Schema</li>
         <li class="next">Визуальные инструменты</li>
@@ -914,7 +1384,45 @@
     </ul>
 </section>
 <section class="slide">
-    <h2 class="shout">Спасибо</h2>
+    <h2>Дополнительные ссылки</h2>
+    <ul>
+        <li>
+            <a href="https://apiblueprint.org/">API Blueprint</a>
+            <ul>
+                <li>
+                    <a href="http://docs.pandurangpatil.apiary.io/#">UI (apiary)</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://raml.org/">RAML</a>
+            <ul>
+                <li>
+                    <a href="https://anypoint.mulesoft.com/apiplatform/popular/#/portals/organizations/52560d3f-c37a-409d-9887-79e0a9a9ecff/apis/5502/versions/5487/pages/30295">UI</a>
+                </li>
+                <li>
+                    <a href="http://static-anypoint-mulesoft-com.s3.amazonaws.com/API_examples_notebooks/raml-design2.html">API Designer RAML(v0.8)</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="http://swagger.io/">Swagger</a>
+            <ul>
+                <li>
+                    <a href="http://swagger.io/docs/specification/what-is-swagger/">Спецификация в примерах</a>
+                </li>
+                <li>
+                    <a href="https://github.com/ArtKuz/rest-api-documentation-nodejs-swagger-example">Репозиторий с примером Top-Down реализации</a>
+                </li>
+                <li>
+                    <a href="https://github.com/ArtKuz/rest-api-swagger-editor-express-example">Репозиторий с примером Bottom-Up реализации</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section class="slide black">
+    <img src="pictures/leonid.jpg" alt="" class="leonid cover">
 </section>
 <section class="slide">
     <h2>Кузвесов Артём, ideco</h2>
@@ -935,6 +1443,9 @@
         <a href="https://rawgit.com/ArtKuz/presentation-ideco-swagger/master/">Ссылка на презентацию:</a>
     </div>
     <img src="pictures/qr-code.gif" alt="" class="qr">
+</section>
+<section class="slide">
+    <h2 class="shout">Спасибо</h2>
 </section>
 <section class="slide">
     <h2 class="shout">Вопросы?</h2>
