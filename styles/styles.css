@@ -556,25 +556,25 @@ h3 {
 }
 .telegram {
     position: absolute;
-    top: 164px;
+    top: 218px;
     left: 70px;
     height: 35px;
 }
 .mail {
     position: absolute;
-    top: 122px;
+    top: 176px;
     left: 70px;
     height: 23px;
 }
 .vk {
     position: absolute;
-    top: 220px;
+    top: 275px;
     left: 74px;
     height: 26px;
 }
 .fb {
     position: absolute;
-    top: 270px;
+    top: 325px;
     left: 75px;
     height: 26px;
 }
