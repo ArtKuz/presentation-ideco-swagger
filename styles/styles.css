@@ -598,3 +598,22 @@ h3 {
 .slide.code pre code.annotate {
     color: #999;
 }
+
+.slide td i,
+i.normal {
+    font-style: normal;
+}
+
+i.bug {
+    color: red;
+}
+
+.repo-info {
+    position: absolute;
+    bottom: 60px;
+}
+
+.repo-info.long {
+    position: absolute;
+    bottom: 40px;
+}
