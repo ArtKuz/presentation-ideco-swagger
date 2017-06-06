@@ -1329,7 +1329,7 @@
     <pre>
         <code class="next">const Book = require('../models/bookModel');</code>
         <code class="next">module.exports = {</code>
-        <code class="next">  getAll(req, res) {</code>
+        <code class="next">  <mark>getAll</mark>(req, res) {</code>
         <code class="next">    const query = {};</code>
         <code class="next"> </code>
         <code class="next">    if (<mark>req.swagger.params.genre.value</mark>) { <span class="comment">// req.query.genre</span></code>
