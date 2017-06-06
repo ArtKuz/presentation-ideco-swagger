@@ -596,6 +596,26 @@
 		<code class="next">npm i swagger-ui-dist</code>
 	</pre>
 </section>
+<section class="slide">
+    <h2>Где писать документацию?</h2>
+    <div class="routes next">
+        <img src="pictures/folder.png" alt="" class="folder">
+        <span>routes</span>
+        <span>&rarr;</span>
+        <img src="pictures/js-file.png" alt="" class="js-file">
+        <span>bookRoutes.js</span>
+    </div>
+    <pre class="next">
+        <code>...</code>
+        <code class="next">bookRouter</code>
+        <code class="next">  .route('/')</code>
+        <code class="next">  .get(bookController.get)</code>
+        <code class="next">  .post(bookController.post);</code>
+        <code class="next">bookRouter</code>
+        <code class="next">  .route('/:bookId')</code>
+        <code class="next">...</code>
+    </pre>
+</section>
 <section class="slide code big">
     <pre>
         <code>bookRouter</code>
